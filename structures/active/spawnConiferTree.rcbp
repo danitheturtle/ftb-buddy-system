@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "biomes": "$THEMED_TREES | $SWAMP | $MESA | $SAVANNA | $HOT | $DRY | $SANDY | $BEACH | $NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD | $MUSHROOM | $MAGICAL",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$FOREST & $CONIFEROUS",
+      "weight": 1.5
+    },
+    {
+      "biomes": "$FOREST & $MOUNTAIN",
+      "weight": 0.1
+    },
+    {
+      "biomes": "!$CONIFEROUS & ($FOREST | $MOUNTAIN | $SWAMP)",
+      "weight": 0.05
+    }
+  ],
+  "metadata": {
+    "title": "Pine Trees (BS)",
+    "description": [
+      "Biome Group for coniferous trees"
+    ]
+  }
+}

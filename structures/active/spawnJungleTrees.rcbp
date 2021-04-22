@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "biomes": "$THEMED_TREES",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$JUNGLE",
+      "weight": 1.0
+    }
+  ],
+  "metadata": {
+    "title": "Jungle Trees (BS)",
+    "description": [
+      ""
+    ]
+  }
+}

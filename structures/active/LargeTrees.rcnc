@@ -1,0 +1,12 @@
+{
+  "generationInfos": [],
+  "defaultSpawnChance": 0.075,
+  "structureMinCap": 5.0,
+  "spawnDistanceMultiplier": 0.0,
+  "spawnDistanceMultiplierCap": 1.0,
+  "selectableInGUI": true,
+  "title": "Large Trees",
+  "tooltip": [
+    "Bigger trees that regularly break up the smaller clutter"
+  ]
+}

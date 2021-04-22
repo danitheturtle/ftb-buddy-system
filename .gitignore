@@ -1,0 +1,25 @@
+
+## binaries
+*.dat
+*.jar
+*.jar.disabled
+
+# Client Settings and Files
+config/InvTweaks.cfg
+config/MouseTweaks.cfg
+config/jei/bookmarks.ini
+config/jei/worldSettings.cfg
+config/jei/lookupHistory.zip
+config/buildcraft/detailed.properties
+saves/*
+local/*
+logs/*
+backups/*
+natives/*
+crash-reports/*
+XaeroWaypoints/*
+XaeroWorldMap/*
+*.zip
+.ReAuth.cfg
+usercache.json
+usernamecache.json

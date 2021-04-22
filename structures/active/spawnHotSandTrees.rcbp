@@ -1,0 +1,26 @@
+{
+  "data": [,
+    {
+      "biomes": "($HOT | $DRY) & ($SAVANNA | $PLAINS | $MESA | $SANDY)",
+      "weight": "0.85"
+    },
+    {
+      "biomes": "$SPARSE",
+      "weight": "0.25"
+    },
+    {
+      "biomes": "$THEMED_TREES",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $COLD | $WET",
+      "weight": 0.0
+    }
+  ],
+  "metadata": {
+    "title": "Hot Dry Trees (BS)",
+    "description": [
+      "Biome Group for hot/dry tree spawns"
+    ]
+  }
+}

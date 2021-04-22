@@ -1,0 +1,23 @@
+To install:  
+   Place all the folders in mods/resources/ruins/
+
+Let the folders merge and overwrite existing files with newer ones.
+
+
+Note there are duplicate files for a few structures, ones with "Modded" in title use blocks from other mods (Tinkers Construct and Chisel2)
+One or the other duplicate file can be removed from the "/generic" folder, depending on if you are playing with those specific mods in addition to Ruins
+Keep all files in the "/Gilly" folder, it is an archive that active templates seek when calling support files.
+
+-----  Sept 3 2015
+
+Updated these 3 files:
+
+Made the ceilings thicker so water doesn't drip and swapped out some chisel blocks.
+
+   GillyModdedReactorCore
+   GillyModdedHangarCargo
+   GillyModdedSkyportRooms
+
+Built a gazebo for another small house in my standard style, designed for beekeeping:
+
+   GillyBeeHouse

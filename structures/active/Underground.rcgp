@@ -1,0 +1,47 @@
+{
+  "data": {
+    "factors": [
+      {
+        "type": "limit",
+        "factor": {
+          "priority": 1.0,
+          "rays": [
+            {
+              "type": "dynpos",
+              "ray": {
+                "type": "world_height"
+              }
+            },
+            {
+              "type": "average",
+              "ray": {
+                "up": false,
+                "destExpression": "blocks:movement \u0026 !is:foliage \u0026 !is:liquid"
+              }
+            },
+            {
+              "type": "dynmove",
+              "ray": {
+                "type": "structure_height",
+                "up": false
+              }
+            },
+            {
+              "type": "dynpos",
+              "ray": {
+                "type": "bedrock",
+                "weight": 0.11124954
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "title": "Underground",
+    "description": [
+      "Place structure underground"
+    ]
+  }
+}

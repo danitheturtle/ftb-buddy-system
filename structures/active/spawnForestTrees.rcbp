@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "biomes": "$THEMED_TREES | $MESA | $SAVANNA | $BEACH | $NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD | $MUSHROOM | $MAGICAL",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$FOREST & !$BIRCH_TREES & !$CONIFEROUS & !$JUNGLE & !$SWAMP",
+      "weight": 1.5
+    },
+    {
+      "biomes": "!$FOREST & ($PLAINS | $CONIFEROUS | $SWAMP)",
+      "weight": 0.05
+    }
+  ],
+  "metadata": {
+    "title": "Forest Trees (BS)",
+    "description": [
+      "Biome Group for forest tree spawns"
+    ]
+  }
+}

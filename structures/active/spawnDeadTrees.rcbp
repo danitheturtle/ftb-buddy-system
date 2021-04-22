@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "biomes": "$THEMED_TREES",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$NETHER | $VOID | $END | $WATER | $SAVANNA | $JUNGLE | $LUSH | $DENSE",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$SPOOKY | $WASTELAND",
+      "weight": 0.5
+    },
+    {
+      "biomes": "$FOREST | $SWAMP",
+      "weight": 0.001
+    }
+  ],
+  "metadata": {
+    "title": "Dead Trees (BS)",
+    "description": [
+      ""
+    ]
+  }
+}

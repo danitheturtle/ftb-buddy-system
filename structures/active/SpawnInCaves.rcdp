@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "dimensions": "id\u003d0 | id\u003d2 | id\u003d3"
+    },
+    {
+      "dimensions": "id\u003d4",
+      "weight": 3.0663609504699707
+    }
+  ],
+  "metadata": {
+    "title": "Spawn In Caves",
+    "description": [
+      "This dimension selector is for structures that typically spawn underground"
+    ]
+  }
+}

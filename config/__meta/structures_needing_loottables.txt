@@ -1,0 +1,17 @@
+BabylonTower
+BigPyramid
+ElvenPond
+HillAltarHouse
+JokerTower
+LonePillars
+PirateHideout
+ShrineSmallAir
+ShrineSmallEarth
+ShrineSmallFire
+ShrineSmallWater
+SmallAbandonedMine
+SmallFortRuins
+SmallPyramid
+SnakeTemple
+SpiderPit
+StatueTemple

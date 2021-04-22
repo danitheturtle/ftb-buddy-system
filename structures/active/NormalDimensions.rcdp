@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "dimensions": "id=0 | id=3"
+    }
+  ],
+  "metadata": {
+    "title": "Normal Dimensions",
+    "description": [
+      "Dimensions with default minecraft generation"
+    ]
+  }
+}

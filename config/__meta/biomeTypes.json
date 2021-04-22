@@ -1,0 +1,47 @@
+{
+  "OCEAN",
+  "WATER",
+  "RIVER",
+
+  "BEACH",
+
+  "PLAINS",
+  "FOREST",
+  "SWAMP",
+  "MESA",
+  "SAVANNA",
+
+  "BIRCH_TREES",
+  "CONIFEROUS",
+  "JUNGLE",
+  "MEGA_TAIGA_TREES",
+
+  "HOT",
+  "COLD",
+  "DRY",
+  "WET",
+
+  "THEMED_TREES",
+
+  "DENSE",
+  "SPARSE",
+
+  "SNOWY",
+  "SANDY",
+  "MOUNTAIN",
+  "HILLS",
+  "SPOOKY",
+
+  "RARE",
+
+  "NETHER",
+  "MUSHROOM",
+  "WASTELAND",
+  "VOID",
+  "END",
+  "TWILIGHT"
+}
+
+mountain can exist by itself
+all sandy places are hot
+all coniferous biomes are also forests
