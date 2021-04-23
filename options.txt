@@ -85,20 +85,7 @@ key_key.hotbar.6:7
 key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
-key_Change Caster Focus:33
-key_Misc Caster Toggle:34
-key_keybind.baublesinventory:48
-key_key.ebwizardry.next_spell:49
-key_key.ebwizardry.previous_spell:48
-key_key.ebwizardry.spell_1:2:ALT
-key_key.ebwizardry.spell_2:3:ALT
-key_key.ebwizardry.spell_3:4:ALT
-key_key.ebwizardry.spell_4:5:ALT
-key_key.ebwizardry.spell_5:6:ALT
-key_key.ebwizardry.spell_6:7:ALT
-key_key.ebwizardry.spell_7:8:ALT
-key_key.ebwizardry.spell_8:9:ALT
-key_keybind.railcraft.cart.bed:208
+key_key.cofh.multimode:47
 key_key.jei.toggleOverlay:24:CONTROL
 key_key.jei.focusSearch:33:CONTROL
 key_key.jei.toggleCheatMode:0
@@ -110,8 +97,6 @@ key_key.jei.previousPage:201
 key_key.jei.nextPage:209
 key_key.jei.bookmark:30
 key_key.jei.toggleBookmarkOverlay:0
-key_Options Gui:23
-key_key.cofh.multimode:47
 key_key.otghud.desc:24
 key_key.quit:1
 key_key.hideHUD:59
@@ -133,32 +118,6 @@ key_gui.xaero_new_waypoint:48
 key_gui.xaero_display_all_sets:0
 key_gui.xaero_toggle_light_overlay:0
 key_gui.xaero_minimap_settings:21
-key_enderio.keybind.inventory:23
-key_enderio.keybind.dsu:0
-key_enderio.keybind.glidertoggle:34
-key_enderio.keybind.soundlocator:0
-key_enderio.keybind.nightvision:25
-key_enderio.keybind.gogglesofrevealing:0
-key_enderio.keybind.stepassist:0
-key_enderio.keybind.speed:0
-key_enderio.keybind.jump:0
-key_enderio.keybind.top:0
-key_enderio.keybind.tnt:0
-key_enderio.keybind.yetawrenchmode:21
-key_enderio.keybind.magnet:0
-key_enderio.keybind.fovreset:0
-key_enderio.keybind.fovunreset:0
-key_enderio.keybind.fovstore:0
-key_enderio.keybind.fovrecall:0
-key_enderio.keybind.fovplus:0
-key_enderio.keybind.fovminus:0
-key_enderio.keybind.fovplusfast:0
-key_enderio.keybind.fovminusfast:0
-key_keybind.railcraft.loco.reverse:53:ALT
-key_keybind.railcraft.loco.faster:52:ALT
-key_keybind.railcraft.loco.slower:51:ALT
-key_keybind.railcraft.loco.mode:50:ALT
-key_keybind.railcraft.loco.whistle:49:ALT
 soundCategory_master:0.0
 soundCategory_music:0.0
 soundCategory_record:1.0

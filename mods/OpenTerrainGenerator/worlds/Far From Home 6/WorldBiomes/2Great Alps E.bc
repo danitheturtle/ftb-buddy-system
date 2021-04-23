@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Arctic Regions
+ReplaceToBiomeName: 2Great Alps
 
 ####################
 # Isle biomes only #
@@ -166,7 +166,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.11, 8.11, 8.11, 8.11, 
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: 2Great Alps E
+RiverBiome: 2Great Alps R
 
 #######################
 # ImprovedRivers:true #
