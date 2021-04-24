@@ -33,7 +33,7 @@ ResourceInheritance: true
 #   Isle biomes:   BiomeSizeWhenIsle (see below)
 #   Border biomes: BiomeSizeWhenBorder (see below)
 #   River biomes:  RiverSize (see WorldConfig)
-BiomeSize: 3
+BiomeSize: 4
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Vorkata Woods
+ReplaceToBiomeName:
 
 ####################
 # Isle biomes only #
@@ -147,7 +147,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.11, 0.11, 15.11, -10.11, -10.11, -10.11, -10.11, -10.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11
+CustomHeightControl: 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 30.0, 8.11, 6.51, 2.11, -3.11, -10.11, -10.11, -4.01, 2.96, -8.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11
 
 
 #######################################################################
@@ -261,7 +261,7 @@ CooledLavaBlock: STATIONARY_LAVA:0
 # When this value is around 0.2, snow will fall on mountain peaks above y=90.
 # When this value is around 0.1, the whole biome will be covered in snow and ice.
 # However, on default biomes, this won't do anything except changing the grass and leaves colors slightly.
-BiomeTemperature: 0.22
+BiomeTemperature: 0.4
 
 # Biome wetness. Float value from 0.0 to 1.0.
 # If this biome is a custom biome, and this value is set to 0, no rain will fall.
@@ -275,10 +275,10 @@ SkyColor: #7BA5FF
 WaterColor: #43D5EE
 
 # Biome grass color.
-GrassColor: #85C047
+GrassColor: #6DAE46
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
-GrassColor2: #5A935F
+GrassColor2: #5FA94A
 
 # Whether the grass color is a multiplier.
 # If you set it to true, the color will be based on this value, the BiomeTemperature and the BiomeWetness.
@@ -436,28 +436,21 @@ Grass(biomesoplenty:waterlily:3,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily:2,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily:1,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily,Grouped,4,4.0,STATIONARY_WATER:0)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
+Tree(10,reeds,30)
 Tree(50,mcherrypink1s1,50)
 Tree(50,mcherrypink2s1,50)
 Tree(50,mcherrywhite1s1,50)
 Tree(50,mcherrywhite2s1,50)
 Tree(10,bopfloweringoak1,50)
 Tree(10,bopfloweringoak2,50)
+Tree(10,mspruce1s1,50)
+Tree(10,mspruce2s1,50)
+Tree(10,mspruce3s1,50)
+Tree(10,mspruce4s1,50)
+Tree(10,mspruce5s1,50)
+Tree(10,mspruce6s1,50)
+Tree(10,mspruce7s1,50)
+Tree(10,mspruce8s1,50)
 Tree(80,grass,80)
 Tree(5,leafpile,20)
 Tree(5,deadleafpile_grass,20)
@@ -1327,7 +1320,7 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, PLAINS, HILLS
+BiomeDictId: FOREST, CONIFEROUS, HILLS, THEMED_TREES
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures

@@ -131,12 +131,12 @@ MaxAverageDepth: 0.0
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
 Volatility1: -3.25
 
-Volatility2: 8.25
+Volatility2: 4.25
 
 # Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.95
+VolatilityWeight2: 1.5
 
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false
@@ -2595,5 +2595,5 @@ BiomeDictId: FOREST, SWAMP, LUSH, WET, THEMED_TREES
 # and SpawnAmbientCreatures settings. Any mob type defined using those settings
 # will override inherited mob settings for the same mob.
 # Use this setting to inherit modded mobs from vanilla biomes (see also: BiomeDictId)
-InheritMobsBiomeName: Swamp
+InheritMobsBiomeName: minecraft:swamp
 

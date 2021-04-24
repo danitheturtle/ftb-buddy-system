@@ -136,7 +136,7 @@ Volatility2: 6.25
 # Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.95
+VolatilityWeight2: 1.5
 
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false

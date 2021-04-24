@@ -131,12 +131,12 @@ MaxAverageDepth: 0.0
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
 Volatility1: -4.65
 
-Volatility2: 8.65
+Volatility2: 6.65
 
 # Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.95
+VolatilityWeight2: 1.5
 
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false
