@@ -124,7 +124,7 @@ MaxAverageHeight: 0.0
 
 # If this value is greater than 0, then it will affect how much, on average, the terrain (usually at the ottom of the ocean) will fall before leveling off when it begins to decrease in elevation. 
 # If the value is less than 0, then it will cause the terrain to either fall to a lesser depth before leveling out or increase in height if the value is a large enough negative.
-MaxAverageDepth: 0.0
+MaxAverageDepth: -1.75
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
@@ -141,7 +141,7 @@ DisableBiomeHeight: false
 # Values which affect your configuration may be found only experimentally. Values may be very big, like ~3000.0 depends from height
 # Example:
 
-CustomHeightControl: 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 16.0, 8.0, 4.61, 9.11, 6.11, 6.11, 8.11, 8.11, 6.11, 6.11, 6.11, 4.11, 8.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11
+CustomHeightControl: 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 16.0, 5.0, 4.61, 8.51, 6.11, 6.11, 8.11, 8.11, 6.11, 6.11, 6.11, 4.11, 8.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11, 6.11
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -268,10 +268,10 @@ SkyColor: #7BA5FF
 WaterColor: #43D5EE
 
 # Biome grass color.
-GrassColor: #6DAE46
+GrassColor: #71A951
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
-GrassColor2: #5FA94A
+GrassColor2: #65A752
 
 # Whether the grass color is a multiplier.
 # If you set it to true, the color will be based on this value, the BiomeTemperature and the BiomeWetness.

@@ -275,7 +275,7 @@ SkyColor: #7BA5FF
 WaterColor: #43D5EE
 
 # Biome grass color.
-GrassColor: #85C047
+GrassColor: #86B356
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
 GrassColor2: #5A935F
