@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "biomes": "$THEMED_TREES | $CONIFEROUS | $COLD | $SWAMP | $JUNGLE | $FOREST | $BEACH | $NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD | $MUSHROOM | $MAGICAL",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$HOT & $DRY & ($MESA | $SAVANNA | $PLAINS)",
+      "weight": 1.0
+    }
+  ],
+  "metadata": {
+    "title": "Savanna Trees (BS)",
+    "description": [
+      "Biome Group for desert/savanna/mesa tree spawns"
+    ]
+  }
+}
