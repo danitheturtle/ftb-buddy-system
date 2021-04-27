@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Temporal Hinterlands
+ReplaceToBiomeName:
 
 ####################
 # Isle biomes only #
@@ -216,7 +216,7 @@ GroundBlock: DIRT:0
 
 # Alternatively, you can use Mesa, MesaForest or MesaBryce to get blocks
 # like the blocks found in the Mesa biomes.
-SurfaceAndGroundControl: biomesoplenty:white_sand, DIRT:0, -3.0, GRASS:0, DIRT:0, 3.0, biomesoplenty:white_sand, DIRT:0, 7.0 
+SurfaceAndGroundControl: biomesoplenty:white_sand, biomesoplenty:white_sand, -5.0, GRASS:0, DIRT:0, -2.5, biomesoplenty:white_sand,biomesoplenty:white_sand, -1.5, GRASS:0, DIRT:0, 1.5, biomesoplenty:white_sand, biomesoplenty:white_sand, 2.5, GRASS:0, DIRT:0, 5.0, biomesoplenty:white_sand, biomesoplenty:white_sand, 7.0 
 
 # Replace Variable: (blockFrom,blockTo[:blockDataTo][,minHeight,maxHeight])
 # Example :
@@ -261,7 +261,7 @@ CooledLavaBlock: STATIONARY_LAVA:0
 # When this value is around 0.2, snow will fall on mountain peaks above y=90.
 # When this value is around 0.1, the whole biome will be covered in snow and ice.
 # However, on default biomes, this won't do anything except changing the grass and leaves colors slightly.
-BiomeTemperature: 0.22
+BiomeTemperature: 0.3
 
 # Biome wetness. Float value from 0.0 to 1.0.
 # If this biome is a custom biome, and this value is set to 0, no rain will fall.
@@ -286,13 +286,13 @@ GrassColor2: #5A935F
 GrassColorIsMultiplier: false
 
 # Biome foliage color.
-FoliageColor: #FFFFFF
+FoliageColor: #85C047
 
 # Biome foliage color 2, used to create a gradient like vanilla swamp grass,only works when FoliageColorIsMultiplier is set to false.Forge only atm.
-FoliageColor2: #FFFFFF
+FoliageColor2: #5A935F
 
 # Whether the foliage color is a multiplier. See GrassColorIsMultiplier for details.
-FoliageColorIsMultiplier: true
+FoliageColorIsMultiplier: false
 
 # Biome fog color.
 FogColor: #000000
@@ -391,21 +391,6 @@ Grass(biomesoplenty:waterlily:3,Grouped,2,2.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily:2,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily:1,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily,Grouped,4,4.0,STATIONARY_WATER:0)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
 Tree(30,reeds,30)
 Ore(COAL_ORE,17,20,100.0,0,250,STONE:0)
 Tree(5,amber,5)
@@ -1794,7 +1779,7 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, HILLS, SANDY
+BiomeDictId: FOREST, HILLS, SANDY, THEMED_TREES
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures

@@ -98,6 +98,9 @@ MaxPercentageOutsideSourceBlock: 5
 # What to do when a block is about to be placed outside the SourceBlock? (dontPlace, placeAnyway)
 OutsideSourceBlock: dontPlace
 
+# Disable doReplaceBlocks to make this BO3 ignore any ReplacedBlocks settings in biome configs, improves performance.
+DoReplaceBlocks: true
+
 # OTG+ settings #
 # Legacy setting, rename this file to .BO4 instead. Set this to true to enable the advanced customstructure features of OTG+.
 IsOTGPlus: false
