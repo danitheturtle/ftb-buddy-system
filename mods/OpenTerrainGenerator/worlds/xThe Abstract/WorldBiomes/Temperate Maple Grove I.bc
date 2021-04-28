@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Temporal Hinterlands
+ReplaceToBiomeName: Temperate Maple Grove
 
 ####################
 # Isle biomes only #
@@ -61,13 +61,13 @@ ReplaceToBiomeName: Temporal Hinterlands
 
 # List of biomes in which this biome will spawn as an isle.
 # For example, Mushroom Isles spawn inside the Ocean biome.
-IsleInBiome: Maple Grove
+IsleInBiome: Temperate Maple Grove
 
 # Size of this biome when spawned as an isle biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 9
+BiomeSizeWhenIsle: 7
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
 BiomeRarityWhenIsle: 99
@@ -107,13 +107,13 @@ BiomeSizeWhenBorder: 7
 BiomeHeight: -1.96
 
 # Biome volatility.
-BiomeVolatility: 0.6
+BiomeVolatility: 2.8
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 30
+SmoothRadius: 15
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
@@ -129,15 +129,11 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -3.25
-
-Volatility2: 8.25
-
-# Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
+Volatility1: -4.65
+Volatility2: -6.25
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.95
-
+VolatilityWeight2: 1.0
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false
 
@@ -145,9 +141,8 @@ DisableBiomeHeight: false
 # blocks height, starting at the bottom of the world. Positive entry - larger chance of spawn blocks, negative - smaller
 # Values which affect your configuration may be found only experimentally. Values may be very big, like ~3000.0 depends from height
 # Example:
-#   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-# Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+
+CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.51, 5.0, -2.0, -2.0, 5.0, 10.11, 6.11, 6.11, 6.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
 
 
 #######################################################################
@@ -166,7 +161,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Maple Grove R
+RiverBiome: Temperate Maple Grove R
 
 #######################
 # ImprovedRivers:true #
@@ -392,21 +387,6 @@ Grass(biomesoplenty:waterlily:2,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily:1,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily,Grouped,4,4.0,STATIONARY_WATER:0)
 Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
 Ore(COAL_ORE,17,20,100.0,0,250,STONE:0)
 Tree(5,amber,5)
 Tree(5,sapphire,5)
@@ -464,6 +444,9 @@ Tree(10,zeddsmallrock5mossy,3)
 Ore(PACKED_ICE,8,20,20.0,0,255,biomesoplenty:hard_ice)
 Tree(50,mbirch1s1,50)
 Tree(50,mbirch2s1,50)
+Tree(60,mmaple1s1,50)
+Tree(60,mmaple2s1,50)
+Tree(60,mmaple3s1,50)
 Tree(60,mmaple1s1,50)
 Tree(60,mmaple2s1,50)
 Tree(60,mmaple3s1,50)

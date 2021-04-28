@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Temporal Hinterlands
+ReplaceToBiomeName: 
 
 ####################
 # Isle biomes only #
@@ -61,16 +61,16 @@ ReplaceToBiomeName: Temporal Hinterlands
 
 # List of biomes in which this biome will spawn as an isle.
 # For example, Mushroom Isles spawn inside the Ocean biome.
-IsleInBiome: 
+IsleInBiome: Temperate Forest
 
 # Size of this biome when spawned as an isle biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 6
+BiomeSizeWhenIsle: 5
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 97
+BiomeRarityWhenIsle: 99
 
 ######################
 # Border biomes only #
@@ -131,12 +131,12 @@ MaxAverageDepth: 0.0
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
 Volatility1: -3.25
 
-Volatility2: 8.25
+Volatility2: 6.25
 
 # Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.95
+VolatilityWeight2: 1.5
 
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false
@@ -166,7 +166,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Maple Grove R
+RiverBiome: Temperate Maple Grove R
 
 #######################
 # ImprovedRivers:true #
@@ -392,21 +392,6 @@ Grass(biomesoplenty:waterlily:2,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily:1,Grouped,4,4.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily,Grouped,4,4.0,STATIONARY_WATER:0)
 Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
 Ore(COAL_ORE,17,20,100.0,0,250,STONE:0)
 Tree(5,amber,5)
 Tree(5,sapphire,5)
@@ -464,6 +449,9 @@ Tree(10,zeddsmallrock5mossy,3)
 Ore(PACKED_ICE,8,20,20.0,0,255,biomesoplenty:hard_ice)
 Tree(50,mbirch1s1,50)
 Tree(50,mbirch2s1,50)
+Tree(60,mmaple1s1,50)
+Tree(60,mmaple2s1,50)
+Tree(60,mmaple3s1,50)
 Tree(60,mmaple1s1,50)
 Tree(60,mmaple2s1,50)
 Tree(60,mmaple3s1,50)
