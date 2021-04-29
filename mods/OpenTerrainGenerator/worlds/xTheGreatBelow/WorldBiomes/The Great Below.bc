@@ -33,7 +33,7 @@ ResourceInheritance: true
 #   Isle biomes:   BiomeSizeWhenIsle (see below)
 #   Border biomes: BiomeSizeWhenBorder (see below)
 #   River biomes:  RiverSize (see WorldConfig)
-BiomeSize: 8
+BiomeSize: 4
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -41,16 +41,16 @@ BiomeSize: 8
 #   50 rarity mean 1/11 chance than other
 # For isle biomes see the BiomeRarityWhenIsle setting below.
 # Doesn`t work on Ocean and River (frozen versions too) biomes when not added as normal biome.
-BiomeRarity: 40
+BiomeRarity: 100
 
 # The hexadecimal color value of this biome. Used in the output of the /otg map command,
 # and used in the input of BiomeMode: FromImage.
-BiomeColor: #0000FF
+BiomeColor: #A0A0A0
 
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: minecraft:river
+ReplaceToBiomeName: 
 
 ####################
 # Isle biomes only #
@@ -61,7 +61,7 @@ ReplaceToBiomeName: minecraft:river
 
 # List of biomes in which this biome will spawn as an isle.
 # For example, Mushroom Isles spawn inside the Ocean biome.
-IsleInBiome: 
+IsleInBiome: Ice Plains
 
 # Size of this biome when spawned as an isle biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
@@ -104,20 +104,20 @@ BiomeSizeWhenBorder: 8
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -2.46
+BiomeHeight: -2.16
 
 # Biome volatility.
-BiomeVolatility: 3.8
+BiomeVolatility: 4.6
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 30
+SmoothRadius: 10
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
-CustomHeightControlSmoothRadius: 4
+CustomHeightControlSmoothRadius: 2
 
 # If this value is greater than 0, then it will affect how much, on average, the terrain will rise before leveling off when it begins to increase in elevation.
 # If the value is less than 0, then it will cause the terrain to either increase to a lower height before leveling out or decrease in height if the value is a large enough negative.
@@ -129,17 +129,17 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -3.25
+Volatility1: -4.65
 
-Volatility2: 8.25
+Volatility2: -6.45
 
 # Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.95
+VolatilityWeight2: 1.0
 
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
-DisableBiomeHeight: false
+DisableBiomeHeight: true
 
 # List of custom height factors, 17 double entries, each controls about 7
 # blocks height, starting at the bottom of the world. Positive entry - larger chance of spawn blocks, negative - smaller
@@ -147,7 +147,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -8.0, -21.0, -10.0, -10.0, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11
+CustomHeightControl: 0.46, 2.46, 6.46, 10.46, 6.46, 2.46, 2.46, 2.46, 6.46, 10.46, 6.46, 2.46, 2.46, 2.46, 6.46, 10.46, 6.46, 2.46, 2.46, 2.46, 6.46, 10.46, 6.46, 2.46, 2.46, 2.46, 6.46, 2.46, 6.46, 2.46, 2.46, -22.46, -22.46
 
 
 #######################################################################
@@ -166,7 +166,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -8.0, -21.0, -10.0, -10.
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: River
+RiverBiome: 
 
 #######################
 # ImprovedRivers:true #
@@ -175,10 +175,10 @@ RiverBiome: River
 # Only available when ImprovedRivers is set to true in the WorldConfig.
 
 # Works the same as BiomeHeight (scroll up), but is used where a river is generated in this biome
-RiverHeight: -1.64
+RiverHeight: -1.0
 
 # Works the same as BiomeVolatility (scroll up), but is used where a river is generated in this biome
-RiverVolatility: 3.6
+RiverVolatility: 0.3
 
 # Works the same as WaterLevelMax (scroll down), but is used where a river is generated in this biome
 # Can be used to create elevated rivers
@@ -195,13 +195,13 @@ RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 #######################################################################
 
 # Change this to generate something else than stone in the biome.
-StoneBlock: STONE:0
+StoneBlock: STONE
 
 # Surface block, usually GRASS.
-SurfaceBlock: GRASS:0
+SurfaceBlock: STONE
 
 # Block from stone to surface, like dirt in most biomes.
-GroundBlock: DIRT:0
+GroundBlock: STONE
 
 # Setting for biomes with more complex surface and ground blocks.
 # Each column in the world has a noise value from what appears to be -7 to 7.
@@ -225,7 +225,7 @@ SurfaceAndGroundControl:
 # Only the following biome resources are affected: CustomObject, CustomStructure, Ore, UnderWaterOre, 
 # Vein, SurfacePatch, Boulder, IceSpike.
 # BO's used as CustomObject/CustomStructure may have DoReplaceBlocks:false to save performance.
-ReplacedBlocks: (GLASS,AIR,0,64)
+ReplacedBlocks: None
 
 ################################
 # Water / Lava & Frozen States #
@@ -240,14 +240,14 @@ WaterLevelMax: 63
 WaterLevelMin: 0
 
 # Block used as water in WaterLevelMax
-WaterBlock: STATIONARY_WATER:0
+WaterBlock: STATIONARY_WATER
 
 # Block used as ice. Ice only spawns if the BiomeTemperture is low enough.
 IceBlock: ICE
 
 # Block used as cooled or frozen lava.
 # Set this to OBSIDIAN for "frozen" lava lakes in cold biomes
-CooledLavaBlock: STATIONARY_LAVA:0
+CooledLavaBlock: STATIONARY_LAVA
 
 
 #######################################################################
@@ -261,7 +261,7 @@ CooledLavaBlock: STATIONARY_LAVA:0
 # When this value is around 0.2, snow will fall on mountain peaks above y=90.
 # When this value is around 0.1, the whole biome will be covered in snow and ice.
 # However, on default biomes, this won't do anything except changing the grass and leaves colors slightly.
-BiomeTemperature: 0.22
+BiomeTemperature: 0.5
 
 # Biome wetness. Float value from 0.0 to 1.0.
 # If this biome is a custom biome, and this value is set to 0, no rain will fall.
@@ -272,18 +272,18 @@ BiomeWetness: 0.5
 SkyColor: #7BA5FF
 
 # Biome water color multiplier.
-WaterColor: #43D5EE
+WaterColor: #FFFFFF
 
 # Biome grass color.
-GrassColor: #85C047
+GrassColor: #FFFFFF
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
-GrassColor2: #5A935F
+GrassColor2: #FFFFFF
 
 # Whether the grass color is a multiplier.
 # If you set it to true, the color will be based on this value, the BiomeTemperature and the BiomeWetness.
 # If you set it to false, the grass color will be just this color.
-GrassColorIsMultiplier: false
+GrassColorIsMultiplier: true
 
 # Biome foliage color.
 FoliageColor: #FFFFFF
@@ -383,33 +383,57 @@ FogThunderWeight: 0.5
 # Vein resource: not in vanilla. Starts an area where ores will spawn. Can be slow, so use a low Rarity (smaller than 1).
 # CustomStructure resource: starts a BO3 structure in the chunk.
 
-Ore(DIRT:0,33,10,100.0,0,255,STONE:0)
-Ore(GRAVEL,33,8,100.0,0,255,STONE:0)
-Ore(STONE:1,33,10,100.0,0,79,STONE:0)
-Ore(STONE:3,33,10,100.0,0,79,STONE:0)
-Ore(STONE:5,33,10,100.0,0,79,STONE:0)
-Ore(COAL_ORE,17,20,100.0,0,127,STONE:0)
-Ore(IRON_ORE,9,20,100.0,0,63,STONE:0)
-Ore(GOLD_ORE,9,2,100.0,0,31,STONE:0)
-Ore(REDSTONE_ORE,8,8,100.0,0,15,STONE:0)
-Ore(DIAMOND_ORE,8,1,100.0,0,15,STONE:0)
-Ore(LAPIS_ORE,7,1,100.0,0,15,STONE:0)
+Ore(DIRT,33,10,100.0,0,255,STONE)
+Ore(GRAVEL,33,8,100.0,0,255,STONE)
+Ore(STONE:1,33,10,100.0,0,79,STONE)
+Ore(STONE:3,33,10,100.0,0,79,STONE)
+Ore(STONE:5,33,10,100.0,0,79,STONE)
+Ore(COAL_ORE,17,20,100.0,0,216,STONE)
+Ore(IRON_ORE,9,20,100.0,0,216,STONE)
+Ore(GOLD_ORE,9,2,100.0,0,216,STONE)
+Ore(REDSTONE_ORE,8,8,100.0,0,216,STONE)
+Ore(DIAMOND_ORE,8,1,100.0,0,216,STONE)
+Ore(EMERALD_ORE,4,1,100.0,0,216,STONE)
+Ore(LAPIS_ORE,7,1,100.0,0,216,STONE)
+Ore(COAL_ORE,17,20,100.0,0,216,STONE)
+Ore(IRON_ORE,9,20,100.0,0,216,STONE)
+Ore(GOLD_ORE,9,2,100.0,0,216,STONE)
+Ore(REDSTONE_ORE,8,8,100.0,0,216,STONE)
+Ore(DIAMOND_ORE,8,1,100.0,0,216,STONE)
+Ore(EMERALD_ORE,4,1,100.0,0,216,STONE)
+Ore(LAPIS_ORE,7,1,100.0,0,216,STONE)
+Ore(COAL_ORE,17,20,100.0,0,216,STONE)
+Ore(IRON_ORE,9,20,100.0,0,216,STONE)
+Ore(GOLD_ORE,9,2,100.0,0,216,STONE)
+Ore(REDSTONE_ORE,8,8,100.0,0,216,STONE)
+Ore(DIAMOND_ORE,8,1,100.0,0,216,STONE)
+Ore(EMERALD_ORE,4,1,100.0,0,216,STONE)
+Ore(LAPIS_ORE,7,1,100.0,0,216,STONE)
+Ore(COAL_ORE,17,20,100.0,0,120,STONE)
+Ore(IRON_ORE,9,20,100.0,0,120,STONE)
+Ore(GOLD_ORE,9,2,100.0,0,120,STONE)
+Ore(REDSTONE_ORE,8,8,100.0,0,120,STONE)
+Ore(DIAMOND_ORE,8,1,100.0,0,120,STONE)
+Ore(EMERALD_ORE,4,1,100.0,0,120,STONE)
+Ore(LAPIS_ORE,7,1,100.0,0,120,STONE)
 UnderGroundLake(25,60,2,5.0,0,49)
-Liquid(STATIONARY_WATER:0,20,100.0,8,60,STONE:0)
-Liquid(STATIONARY_LAVA:0,10,100.0,8,60,STONE:0)
-## INVALID SMALLLAKE - Too few arguments supplied ##
-SmallLake(STATIONARY_WATER:0,4,7.0,-8.119)
-## INVALID SMALLLAKE - Too few arguments supplied ##
-SmallLake(STATIONARY_LAVA:0,2,1.0,-8.119)
-SmallLake(STATIONARY_LAVA:0,2,8.0,6,50)
-UnderWaterOre(SAND:0,7,3,100.0,DIRT:0,GRASS:0)
-UnderWaterOre(CLAY,4,1,100.0,DIRT:0,CLAY)
-UnderWaterOre(GRAVEL,6,1,100.0,DIRT:0,GRASS:0)
-Dungeon(8,100.0,0,46)
-Tree(1,BigTree,1,Tree,9)
-Grass(Tallgrass,NotGrouped,10,100.0,GRASS:0,DIRT:0)
-Plant(Dandelion,2,100.0,0,128,GRASS:0,DIRT:0)
-Plant(PUMPKIN:2,1,3.0,0,128,GRASS:0)
+Liquid(WATER,20,100.0,8,255,STONE)
+Liquid(LAVA,10,100.0,8,255,STONE)
+Liquid(WATER,20,100.0,8,255,STONE)
+Liquid(LAVA,10,100.0,8,255,STONE)
+Liquid(WATER,20,100.0,8,255,STONE)
+Liquid(LAVA,10,100.0,8,255,STONE)
+SmallLake(WATER,4,7.0,8,119)
+SmallLake(LAVA,2,1.0,8,119)
+SmallLake(LAVA,2,8.0,6,50)
+UnderWaterOre(SAND,7,3,100.0,DIRT,GRASS)
+UnderWaterOre(CLAY,4,1,100.0,DIRT,CLAY)
+UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
+Dungeon(8,100.0,0,240)
+Dungeon(8,100.0,0,240)
+Dungeon(8,100.0,0,240)
+Dungeon(8,100.0,0,240)
+Grass(Tallgrass,NotGrouped,10,100.0,GRASS,DIRT)
 CustomObject(UseWorld)
 
 #######################################################################
@@ -438,7 +462,7 @@ CustomObject(UseWorld)
 # For virtual (replaceToBiomeName) biomes: Inherit all Sapling() resources from the
 # replaceToBiomeName biome. If a Sapling() with the same SaplingType is defined 
 # in this config and the parent config, the one from this config is used.
-InheritSaplingResource: true
+InheritSaplingResource: false
 
 
 #######################################################################
@@ -462,13 +486,13 @@ BiomeObjects:
 # regardless of these settings.
 # Disables strongholds for this biome. If there is no suitable biome nearby,
 # Minecraft will ignore this setting.
-StrongholdsEnabled: false
+StrongholdsEnabled: true
 
 # Whether a Woodland Mansion can be placed in this biome.
 WoodLandMansionsEnabled: false
 
 # Whether an Ocean Monument can be placed in this biome.
-OceanMonumentsEnabled: true
+OceanMonumentsEnabled: false
 
 # Whether a Nether Fortress can start in this biome. Might extend to neighbor biomes.
 NetherFortressesEnabled: false
@@ -482,7 +506,7 @@ MineshaftType: normal
 # The mineshaft rarity from 0 to 100. 0 = no mineshafts, 1 = default rarity, 100 = a wooden chaos.
 # Note that mineshafts will never spawn, regardless of this setting, if 
 # MineshaftType was set to disabled
-MineshaftRarity: 0.25
+MineshaftRarity: 1.0
 
 # The type of the aboveground rare building in this biome. Can be desertPyramid, jungleTemple, swampHut, igloo or disabled.
 RareBuildingType: disabled
@@ -554,12 +578,12 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: RIVER
+BiomeDictId: COLD, SNOWY, MOUNTAIN
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures
 # and SpawnAmbientCreatures settings. Any mob type defined using those settings
 # will override inherited mob settings for the same mob.
 # Use this setting to inherit modded mobs from vanilla biomes (see also: BiomeDictId)
-InheritMobsBiomeName: minecraft:river
+InheritMobsBiomeName: minecraft:ice_mountains
 

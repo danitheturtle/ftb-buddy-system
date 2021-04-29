@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "biomes": "\"name\u003dOld Sequoia Forest\" | \"name\u003dOld Sequoia Forest E\" | \"name\u003dOld Sequoia Forest I\"",
+      "biomes": "$FOREST & $CONIFEROUS & $DENSE & $SPARSE & $MUSHROOM & $THEMED_TREES",
       "weight": 3.5
     }
   ],

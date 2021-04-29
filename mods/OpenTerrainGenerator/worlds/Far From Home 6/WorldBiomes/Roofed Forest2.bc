@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Magic Forests
+ReplaceToBiomeName:
 
 ####################
 # Isle biomes only #
@@ -261,7 +261,7 @@ CooledLavaBlock: STATIONARY_LAVA:0
 # When this value is around 0.2, snow will fall on mountain peaks above y=90.
 # When this value is around 0.1, the whole biome will be covered in snow and ice.
 # However, on default biomes, this won't do anything except changing the grass and leaves colors slightly.
-BiomeTemperature: 0.22
+BiomeTemperature: 0.5
 
 # Biome wetness. Float value from 0.0 to 1.0.
 # If this biome is a custom biome, and this value is set to 0, no rain will fall.
@@ -278,7 +278,7 @@ WaterColor: #43D5EE
 GrassColor: #85C047
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
-GrassColor2: #5A935F
+GrassColor2: #009975
 
 # Whether the grass color is a multiplier.
 # If you set it to true, the color will be based on this value, the BiomeTemperature and the BiomeWetness.
@@ -286,13 +286,13 @@ GrassColor2: #5A935F
 GrassColorIsMultiplier: false
 
 # Biome foliage color.
-FoliageColor: #FFFFFF
+FoliageColor: #8BB76E
 
 # Biome foliage color 2, used to create a gradient like vanilla swamp grass,only works when FoliageColorIsMultiplier is set to false.Forge only atm.
-FoliageColor2: #FFFFFF
+FoliageColor2: #4ADCF9
 
 # Whether the foliage color is a multiplier. See GrassColorIsMultiplier for details.
-FoliageColorIsMultiplier: true
+FoliageColorIsMultiplier: false
 
 # Biome fog color.
 FogColor: #000000
@@ -456,16 +456,16 @@ Tree(70,zdarkoak5s1,40)
 Tree(70,zdarkoak6s1,40)
 Tree(70,zdarkoak7s1,40)
 Tree(70,zdarkoak8s1,40)
-Tree(5,boppinkcherry1,10)
-Tree(5,boppinkcherry2,10)
-Tree(5,boppinkcherry3,10)
-Tree(5,boppinkcherry4,10)
-Tree(5,boppinkcherry5,10)
-Tree(5,bopwhitecherry1,10)
-Tree(5,bopwhitecherry2,10)
-Tree(5,bopwhitecherry3,10)
-Tree(5,bopwhitecherry4,10)
-Tree(5,bopwhitecherry5,10)
+Tree(5,boppinkcherry1,20)
+Tree(5,boppinkcherry2,20)
+Tree(5,boppinkcherry3,20)
+Tree(5,boppinkcherry4,20)
+Tree(5,boppinkcherry5,20)
+Tree(5,bopwhitecherry1,20)
+Tree(5,bopwhitecherry2,20)
+Tree(5,bopwhitecherry3,20)
+Tree(5,bopwhitecherry4,20)
+Tree(5,bopwhitecherry5,20)
 Tree(80,grass,80)
 Tree(5,leafpile,20)
 Tree(5,deadleafpile_grass,20)
@@ -1339,7 +1339,7 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, PLAINS
+BiomeDictId: FOREST, PLAINS, MAGICAL, THEMED_TREES
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures

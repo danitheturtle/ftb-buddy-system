@@ -33,7 +33,7 @@ ResourceInheritance: true
 #   Isle biomes:   BiomeSizeWhenIsle (see below)
 #   Border biomes: BiomeSizeWhenBorder (see below)
 #   River biomes:  RiverSize (see WorldConfig)
-BiomeSize: 3
+BiomeSize: 4
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -41,16 +41,16 @@ BiomeSize: 3
 #   50 rarity mean 1/11 chance than other
 # For isle biomes see the BiomeRarityWhenIsle setting below.
 # Doesn`t work on Ocean and River (frozen versions too) biomes when not added as normal biome.
-BiomeRarity: 40
+BiomeRarity: 100
 
 # The hexadecimal color value of this biome. Used in the output of the /otg map command,
 # and used in the input of BiomeMode: FromImage.
-BiomeColor: #000070
+BiomeColor: #A0A0A0
 
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: minecraft:ocean
+ReplaceToBiomeName: The Great Below
 
 ####################
 # Isle biomes only #
@@ -61,16 +61,16 @@ ReplaceToBiomeName: minecraft:ocean
 
 # List of biomes in which this biome will spawn as an isle.
 # For example, Mushroom Isles spawn inside the Ocean biome.
-IsleInBiome: Ocean
+IsleInBiome: The Great Below
 
 # Size of this biome when spawned as an isle biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 9
+BiomeSizeWhenIsle: 6
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 70
+BiomeRarityWhenIsle: 94
 
 ######################
 # Border biomes only #
@@ -82,7 +82,7 @@ BiomeRarityWhenIsle: 70
 # List of biomes this biome can be a border of.
 # For example, the Beach biome is a border on the Ocean biome, so
 # it can spawn anywhere on the border of an ocean.
-BiomeIsBorder: Ocean
+BiomeIsBorder: 
 
 # List of biomes that cancel spawning of this biome.
 # For example, the Beach biome will never spawn next to an Extreme Hills biome.
@@ -92,7 +92,7 @@ NotBorderNear:
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* borders. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenBorder number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenBorder: 7
+BiomeSizeWhenBorder: 8
 
 
 #######################################################################
@@ -104,20 +104,20 @@ BiomeSizeWhenBorder: 7
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -1.96
+BiomeHeight: -2.16
 
 # Biome volatility.
-BiomeVolatility: 1.2
+BiomeVolatility: 0.6
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 30
+SmoothRadius: 10
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
-CustomHeightControlSmoothRadius: 4
+CustomHeightControlSmoothRadius: 2
 
 # If this value is greater than 0, then it will affect how much, on average, the terrain will rise before leveling off when it begins to increase in elevation.
 # If the value is less than 0, then it will cause the terrain to either increase to a lower height before leveling out or decrease in height if the value is a large enough negative.
@@ -129,17 +129,17 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -3.25
+Volatility1: -4.65
 
-Volatility2: 8.25
+Volatility2: -6.45
 
 # Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.95
+VolatilityWeight2: 1.0
 
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
-DisableBiomeHeight: false
+DisableBiomeHeight: true
 
 # List of custom height factors, 17 double entries, each controls about 7
 # blocks height, starting at the bottom of the world. Positive entry - larger chance of spawn blocks, negative - smaller
@@ -147,7 +147,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+CustomHeightControl: 0.46, 2.46, 6.46, 10.46, 6.46, 2.46, 2.46, 2.46, 6.46, 10.46, 6.46, 2.46, 2.46, 2.46, 6.46, 10.46, 6.46, 2.46, 2.46, 2.46, 6.46, 10.46, 6.46, 2.46, 2.46, 2.46, 6.46, 2.46, 6.46, 2.46, 2.46, -22.46, -22.46
 
 
 #######################################################################
@@ -166,7 +166,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: River
+RiverBiome: 
 
 #######################
 # ImprovedRivers:true #
@@ -195,13 +195,13 @@ RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 #######################################################################
 
 # Change this to generate something else than stone in the biome.
-StoneBlock: STONE:0
+StoneBlock: STONE
 
 # Surface block, usually GRASS.
-SurfaceBlock: GRASS:0
+SurfaceBlock: STONE
 
 # Block from stone to surface, like dirt in most biomes.
-GroundBlock: DIRT:0
+GroundBlock: STONE
 
 # Setting for biomes with more complex surface and ground blocks.
 # Each column in the world has a noise value from what appears to be -7 to 7.
@@ -225,7 +225,7 @@ SurfaceAndGroundControl:
 # Only the following biome resources are affected: CustomObject, CustomStructure, Ore, UnderWaterOre, 
 # Vein, SurfacePatch, Boulder, IceSpike.
 # BO's used as CustomObject/CustomStructure may have DoReplaceBlocks:false to save performance.
-ReplacedBlocks: (GLASS,AIR,0,64)
+ReplacedBlocks: None
 
 ################################
 # Water / Lava & Frozen States #
@@ -240,14 +240,14 @@ WaterLevelMax: 63
 WaterLevelMin: 0
 
 # Block used as water in WaterLevelMax
-WaterBlock: STATIONARY_WATER:0
+WaterBlock: STATIONARY_WATER
 
 # Block used as ice. Ice only spawns if the BiomeTemperture is low enough.
 IceBlock: ICE
 
 # Block used as cooled or frozen lava.
 # Set this to OBSIDIAN for "frozen" lava lakes in cold biomes
-CooledLavaBlock: STATIONARY_LAVA:0
+CooledLavaBlock: STATIONARY_LAVA
 
 
 #######################################################################
@@ -261,7 +261,7 @@ CooledLavaBlock: STATIONARY_LAVA:0
 # When this value is around 0.2, snow will fall on mountain peaks above y=90.
 # When this value is around 0.1, the whole biome will be covered in snow and ice.
 # However, on default biomes, this won't do anything except changing the grass and leaves colors slightly.
-BiomeTemperature: 0.22
+BiomeTemperature: 0.5
 
 # Biome wetness. Float value from 0.0 to 1.0.
 # If this biome is a custom biome, and this value is set to 0, no rain will fall.
@@ -272,18 +272,18 @@ BiomeWetness: 0.5
 SkyColor: #7BA5FF
 
 # Biome water color multiplier.
-WaterColor: #43D5EE
+WaterColor: #FFFFFF
 
 # Biome grass color.
-GrassColor: #85C047
+GrassColor: #FFFFFF
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
-GrassColor2: #5A935F
+GrassColor2: #FFFFFF
 
 # Whether the grass color is a multiplier.
 # If you set it to true, the color will be based on this value, the BiomeTemperature and the BiomeWetness.
 # If you set it to false, the grass color will be just this color.
-GrassColorIsMultiplier: false
+GrassColorIsMultiplier: true
 
 # Biome foliage color.
 FoliageColor: #FFFFFF
@@ -383,834 +383,58 @@ FogThunderWeight: 0.5
 # Vein resource: not in vanilla. Starts an area where ores will spawn. Can be slow, so use a low Rarity (smaller than 1).
 # CustomStructure resource: starts a BO3 structure in the chunk.
 
-Ore(STONE:1,18,4,4.0,1,255,STONE:0)
-Ore(STONE:3,18,4,4.0,1,255,STONE:0)
-Ore(STONE:5,18,4,4.0,1,255,STONE:0)
-Ore(COAL_ORE,17,20,100.0,0,250,STONE:0)
-Tree(5,amber,5)
-Tree(5,sapphire,5)
-Tree(5,malachite,5)
-Tree(5,tanzanite,5)
-Tree(5,topaz,5)
-Tree(5,peridot,5)
-Tree(5,ruby,5)
-Ore(IRON_ORE,9,20,40.0,0,91,STONE:0)
-Ore(GOLD_ORE,9,2,20.0,0,24,STONE:0)
-Ore(REDSTONE_ORE,8,8,40.0,0,25,STONE:0)
-Ore(DIAMOND_ORE,8,1,20.0,0,16,STONE:0)
-Ore(DIAMOND_ORE,8,4,6.0,154,250,STONE:0)
-Ore(LAPIS_ORE,7,1,30.0,0,24,STONE:0)
-Ore(EMERALD_ORE,7,1,40.0,4,32,STONE:0)
-Ore(DIRT:0,33,10,100.0,0,255,STONE:0)
-Ore(GRAVEL,33,8,100.0,0,255,STONE:0)
+Ore(DIRT,33,10,100.0,0,255,STONE)
+Ore(GRAVEL,33,8,100.0,0,255,STONE)
+Ore(STONE:1,33,10,100.0,0,79,STONE)
+Ore(STONE:3,33,10,100.0,0,79,STONE)
+Ore(STONE:5,33,10,100.0,0,79,STONE)
+Ore(COAL_ORE,17,20,100.0,0,216,STONE)
+Ore(IRON_ORE,9,20,100.0,0,216,STONE)
+Ore(GOLD_ORE,9,2,100.0,0,216,STONE)
+Ore(REDSTONE_ORE,8,8,100.0,0,216,STONE)
+Ore(DIAMOND_ORE,8,1,100.0,0,216,STONE)
+Ore(EMERALD_ORE,4,1,100.0,0,216,STONE)
+Ore(LAPIS_ORE,7,1,100.0,0,216,STONE)
+Ore(COAL_ORE,17,20,100.0,0,216,STONE)
+Ore(IRON_ORE,9,20,100.0,0,216,STONE)
+Ore(GOLD_ORE,9,2,100.0,0,216,STONE)
+Ore(REDSTONE_ORE,8,8,100.0,0,216,STONE)
+Ore(DIAMOND_ORE,8,1,100.0,0,216,STONE)
+Ore(EMERALD_ORE,4,1,100.0,0,216,STONE)
+Ore(LAPIS_ORE,7,1,100.0,0,216,STONE)
+Ore(COAL_ORE,17,20,100.0,0,216,STONE)
+Ore(IRON_ORE,9,20,100.0,0,216,STONE)
+Ore(GOLD_ORE,9,2,100.0,0,216,STONE)
+Ore(REDSTONE_ORE,8,8,100.0,0,216,STONE)
+Ore(DIAMOND_ORE,8,1,100.0,0,216,STONE)
+Ore(EMERALD_ORE,4,1,100.0,0,216,STONE)
+Ore(LAPIS_ORE,7,1,100.0,0,216,STONE)
+Ore(COAL_ORE,17,20,100.0,0,120,STONE)
+Ore(IRON_ORE,9,20,100.0,0,120,STONE)
+Ore(GOLD_ORE,9,2,100.0,0,120,STONE)
+Ore(REDSTONE_ORE,8,8,100.0,0,120,STONE)
+Ore(DIAMOND_ORE,8,1,100.0,0,120,STONE)
+Ore(EMERALD_ORE,4,1,100.0,0,120,STONE)
+Ore(LAPIS_ORE,7,1,100.0,0,120,STONE)
 UnderGroundLake(25,60,2,5.0,0,49)
-Liquid(STATIONARY_WATER:0,20,100.0,8,60,STONE:0)
-Liquid(STATIONARY_LAVA:0,10,100.0,8,60,STONE:0)
-SmallLake(STATIONARY_WATER:0,4,7.0,8,119)
-UnderWaterOre(SAND:0,7,3,100.0,DIRT:0,GRASS:0)
-UnderWaterOre(CLAY,4,1,100.0,DIRT:0,CLAY)
-UnderWaterOre(GRAVEL,6,1,100.0,DIRT:0,GRASS:0)
-UnderWaterOre(biomesoplenty:1,3,1,100.0,SAND:0,DIRT:0)
-UnderWaterOre(biomesoplenty:9,3,1,100.0,DIRT:0,SAND:0)
-Dungeon(8,100.0,0,46)
-Tree(5,zeddlargerock1,3)
-Tree(5,zeddlargerock1mossy,3)
-Tree(5,zeddlargerock2,3)
-Tree(5,zeddlargerock2mossy,3)
-Tree(5,zeddlargerock3,3)
-Tree(5,zeddlargerock3mossy,3)
-Tree(5,zeddlargerock4,3)
-Tree(5,zeddlargerock4mossy,3)
-Tree(5,zeddsmallrock1,3)
-Tree(5,zeddsmallrock1mossy,3)
-Tree(5,zeddsmallrock2,3)
-Tree(5,zeddsmallrock2mossy,3)
-Tree(5,zeddsmallrock3,3)
-Tree(5,zeddsmallrock3mossy,3)
-Tree(5,zeddsmallrock4,3)
-Tree(5,zeddsmallrock4mossy,3)
-Tree(5,zeddsmallrock5,3)
-Tree(5,zeddsmallrock5mossy,3)
-Tree(15,redflower,15)
-Tree(15,yellowflower,15)
-Tree(50,ycfloweringgrass,50)
-Tree(50,ycfloweringgrass,50)
-CustomObject(sponge)
-Ore(DIRT:1,8,4,4.0,0,255,DIRT:0)
-Tree(20,fallentreeoak,20)
-Tree(20,fallentreeoak2,20)
-Tree(20,fallentreeoak3,20)
-Tree(20,fallentreeoak4,20)
-Tree(20,fallentreeoak5,20)
-Tree(20,fallentreeoak6,20)
-Tree(20,fallentreeoak7,20)
-Tree(20,fallentreeoak8,20)
-Tree(5,minersdelight_stone,5)
-CustomStructure(branchingStart,15.0)
-Ore(PACKED_ICE,8,20,20.0,0,255,biomesoplenty:hard_ice)
-Tree(10,voak1,10)
-Tree(10,voak2,10)
-Tree(10,voak3,10)
-Tree(10,voak4,10)
-Tree(10,voak5,10)
-Tree(10,voak6,10)
-Tree(10,voak7,10)
-Tree(2,bopfloweringoak1,2)
-Tree(2,bopfloweringoak2,2)
-Plant(Sunflower,1,25.0,63,255,GRASS:0,DIRT:0)
-Tree(10,voakbig1,10)
-Tree(10,voakbig2,10)
-Tree(10,vdarkoak1,10)
-Tree(10,vdarkoak2,10)
-Tree(10,vdarkoak3,10)
-Tree(40,DarkTree1,50)
-Tree(40,DarkTree2,50)
-Tree(40,DarkTree3,50)
-Tree(40,DarkTree4,50)
-Tree(40,DarkTree5,50)
-Tree(40,Dark1_oak,50)
-Tree(20,Dark1_darkoak,50)
-Tree(20,Dark2_darkoak,50)
-Tree(20,Dark3_darkoak,50)
-Tree(20,Dark4_darkoak,50)
-Tree(20,Dark5_darkoak,50)
-Tree(40,Dark2_oak,50)
-Tree(40,Dark3_oak,50)
-Tree(40,Dark4_oak,50)
-Tree(40,Dark5_oak,50)
-Tree(40,2OakDark1_oak,50)
-Tree(40,2OakDark2_oak,50)
-Tree(40,2OakDark3_oak,50)
-Tree(40,2OakDark4_oak,50)
-Tree(40,2OakDark5_oak,50)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(50,oxeyedaisy,50)
-Tree(50,pinktulip,50)
-Tree(50,flax,50)
-Tree(50,wildflower,50)
-Tree(50,oxeyedaisy,50)
-Tree(50,pinktulip,50)
-Tree(50,flax,50)
-Tree(50,wildflower,50)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Plant(DoubleTallgrass,4,5.0,62,255,GRASS:0)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassshort,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
-Tree(80,grassmedium,40)
+Liquid(WATER,20,100.0,8,255,STONE)
+Liquid(LAVA,10,100.0,8,255,STONE)
+Liquid(WATER,20,100.0,8,255,STONE)
+Liquid(LAVA,10,100.0,8,255,STONE)
+Liquid(WATER,20,100.0,8,255,STONE)
+Liquid(LAVA,10,100.0,8,255,STONE)
+SmallLake(WATER,4,7.0,8,119)
+SmallLake(LAVA,2,1.0,8,119)
+SmallLake(LAVA,2,8.0,6,50)
+UnderWaterOre(SAND,7,3,100.0,DIRT,GRASS)
+UnderWaterOre(CLAY,4,1,100.0,DIRT,CLAY)
+UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
+Dungeon(8,100.0,0,240)
+Dungeon(8,100.0,0,240)
+Dungeon(8,100.0,0,240)
+Dungeon(8,100.0,0,240)
+Grass(Tallgrass,NotGrouped,10,100.0,GRASS,DIRT)
+CustomObject(UseWorld)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -1238,7 +462,7 @@ Tree(80,grassmedium,40)
 # For virtual (replaceToBiomeName) biomes: Inherit all Sapling() resources from the
 # replaceToBiomeName biome. If a Sapling() with the same SaplingType is defined 
 # in this config and the parent config, the one from this config is used.
-InheritSaplingResource: true
+InheritSaplingResource: false
 
 
 #######################################################################
@@ -1271,10 +495,10 @@ WoodLandMansionsEnabled: false
 OceanMonumentsEnabled: false
 
 # Whether a Nether Fortress can start in this biome. Might extend to neighbor biomes.
-NetherFortressesEnabled: true
+NetherFortressesEnabled: false
 
 # The village type in this biome. Can be wood, sandstone, taiga, savanna or disabled.
-VillageType: wood
+VillageType: disabled
 
 # The mineshaft type in this biome. Can be normal, mesa or disabled.
 MineshaftType: normal
@@ -1282,7 +506,7 @@ MineshaftType: normal
 # The mineshaft rarity from 0 to 100. 0 = no mineshafts, 1 = default rarity, 100 = a wooden chaos.
 # Note that mineshafts will never spawn, regardless of this setting, if 
 # MineshaftType was set to disabled
-MineshaftRarity: 0.25
+MineshaftRarity: 1.0
 
 # The type of the aboveground rare building in this biome. Can be desertPyramid, jungleTemple, swampHut, igloo or disabled.
 RareBuildingType: disabled
@@ -1354,12 +578,12 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, PLAINS
+BiomeDictId: COLD, SNOWY, MOUNTAIN
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures
 # and SpawnAmbientCreatures settings. Any mob type defined using those settings
 # will override inherited mob settings for the same mob.
 # Use this setting to inherit modded mobs from vanilla biomes (see also: BiomeDictId)
-InheritMobsBiomeName: Forest
+InheritMobsBiomeName: minecraft:ice_mountains
 
