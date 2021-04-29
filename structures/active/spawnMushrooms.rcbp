@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "biomes": "$MUSHROOM",
+      "weight": 0.25
+    }
+  ],
+  "metadata": {
+    "title": "Mushroom (BS)",
+    "description": [
+      "Spawn in mushroom biomes"
+    ]
+  }
+}

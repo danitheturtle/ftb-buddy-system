@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Temporal Hinterlands
+ReplaceToBiomeName: Old Sequoia Forest
 
 ####################
 # Isle biomes only #
@@ -440,9 +440,6 @@ Tree(50,xbovergrownstone,50)
 Tree(50,xbovergrownstone,50)
 Tree(50,xbovergrownstone,50)
 CustomObject(sponge)
-Tree(5,mbrownmushroom1,5)
-Tree(5,mredmushroom1,5)
-Tree(5,mredmushroom2,5)
 Ore(DIRT:1,8,4,4.0,0,255,DIRT:0)
 Cactus(biomesoplenty:log_2,5,5.0,60,255,GRASS:0)
 Cactus(biomesoplenty:log_2,5,5.0,60,255,GRASS:0)
@@ -1715,12 +1712,12 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, DENSE, CONIFEROUS
+BiomeDictId: FOREST, CONIFEROUS, MUSHROOM, THEMED_TREES
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures
 # and SpawnAmbientCreatures settings. Any mob type defined using those settings
 # will override inherited mob settings for the same mob.
 # Use this setting to inherit modded mobs from vanilla biomes (see also: BiomeDictId)
-InheritMobsBiomeName: FOREST
+InheritMobsBiomeName: Forest
 

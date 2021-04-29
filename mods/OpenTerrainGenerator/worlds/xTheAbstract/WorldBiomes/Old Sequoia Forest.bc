@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Temporal Hinterlands
+ReplaceToBiomeName:
 
 ####################
 # Isle biomes only #
@@ -67,10 +67,10 @@ IsleInBiome:
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 9
+BiomeSizeWhenIsle: 6
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 99
+BiomeRarityWhenIsle: 97
 
 ######################
 # Border biomes only #
@@ -108,6 +108,7 @@ BiomeHeight: -1.96
 
 # Biome volatility.
 BiomeVolatility: 2.8
+
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
@@ -124,15 +125,16 @@ MaxAverageHeight: 0.0
 
 # If this value is greater than 0, then it will affect how much, on average, the terrain (usually at the ottom of the ocean) will fall before leveling off when it begins to decrease in elevation. 
 # If the value is less than 0, then it will cause the terrain to either fall to a lesser depth before leveling out or increase in height if the value is a large enough negative.
-MaxAverageDepth: 0.0
+MaxAverageDepth: -1.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -6.65
-Volatility2: -6.25
-VolatilityWeight1: 1.95
+Volatility1: -3.65
+Volatility2: 4.25
 
-VolatilityWeight2: 1.0
+VolatilityWeight1: 1.95
+VolatilityWeight2: 1.95
+
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false
 
@@ -141,7 +143,8 @@ DisableBiomeHeight: false
 # Values which affect your configuration may be found only experimentally. Values may be very big, like ~3000.0 depends from height
 # Example:
 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+CustomHeightControl: 50.11, 50.11, 50.11, 50.11, 50.11, 50.11, 50.11, 25.11, 10.0, 4.71, 4.21, 6.41, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -178,7 +181,8 @@ RiverVolatility: 0.3
 RiverWaterLevel: 63
 
 # Works the same as CustomHeightControl (scroll up), but is used where a river is generated in this biome
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -343,6 +347,7 @@ FogThunderWeight: 0.5
 # Well(BaseBlockName,HalfSlabBlockName,WaterBlockName,Frequency,Rarity,MinAltitude,MaxAltitude,BlockSource[,BlockSource2,..])
 # Boulder(BlockName,Frequency,Rarity,MinAltitude,MaxAltitude,BlockSource[,BlockSource2,..]
 # IceSpike(BlockName,IceSpikeType,Frequency,Rarity,MinAltitude,MaxAltitude,Blocksource[,BlockSource2,...])
+# Fossil(Rarity)
 
 # BlockName:      must be the name of a block. May include block data, like "WOOL:1".
 # BlockSource:    list of blocks the resource can spawn on/in. You can also use "Solid" or "All".
@@ -398,10 +403,6 @@ Ore(STONE:0,54,50,50.0,62,255,DIRT:0)
 Ore(STONE:0,54,50,50.0,62,255,DIRT:0)
 Ore(STONE:0,54,50,50.0,62,255,DIRT:0)
 Ore(STONE:0,54,50,50.0,62,255,DIRT:0)
-Ore(STONE:0,54,50,50.0,62,255,DIRT:0)
-Ore(STONE:0,54,50,50.0,62,255,DIRT:0)
-Ore(STONE:0,54,50,50.0,62,255,DIRT:0)
-Ore(STONE:0,54,50,50.0,62,255,DIRT:0)
 Ore(DIRT:0,33,10,100.0,0,255,STONE:0)
 Ore(GRAVEL,33,8,100.0,0,255,STONE:0)
 UnderGroundLake(25,60,2,5.0,0,49)
@@ -439,9 +440,6 @@ Tree(50,xbovergrownstone,50)
 Tree(50,xbovergrownstone,50)
 Tree(50,xbovergrownstone,50)
 CustomObject(sponge)
-Tree(5,mbrownmushroom1,5)
-Tree(5,mredmushroom1,5)
-Tree(5,mredmushroom2,5)
 Ore(DIRT:1,8,4,4.0,0,255,DIRT:0)
 Cactus(biomesoplenty:log_2,5,5.0,60,255,GRASS:0)
 Cactus(biomesoplenty:log_2,5,5.0,60,255,GRASS:0)
@@ -1714,7 +1712,7 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, DENSE, CONIFEROUS
+BiomeDictId: FOREST, CONIFEROUS, MUSHROOM, THEMED_TREES
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures

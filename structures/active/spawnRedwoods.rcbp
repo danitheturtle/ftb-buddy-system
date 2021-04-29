@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "biomes": "\"name\u003dOld Sequoia Forest\" | \"name\u003dOld Sequoia Forest E\" | \"name\u003dOld Sequoia Forest I\"",
+      "weight": 3.5
+    }
+  ],
+  "metadata": {
+    "title": "Redwood Trees (BS)",
+    "description": [
+      "Spawns redwood trees in the Old Sequoia Forest biome"
+    ]
+  }
+}
