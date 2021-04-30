@@ -60,7 +60,7 @@ SpawnHeightVariance: 0
 MinHeight: 63
 
 # When in randomY mode used as the maximum Y to spawn this BO3 at.
-MaxHeight: 256
+MaxHeight: 255
 
 ######################
 # Extrusion settings #
@@ -98,6 +98,9 @@ MaxPercentageOutsideSourceBlock: 100
 # What to do when a block is about to be placed outside the SourceBlock? (dontPlace, placeAnyway)
 OutsideSourceBlock: placeAnyway
 
+# Disable doReplaceBlocks to make this BO3 ignore any ReplacedBlocks settings in biome configs, improves performance.
+DoReplaceBlocks: true
+
 # OTG+ settings #
 # Legacy setting, rename this file to .BO4 instead. Set this to true to enable the advanced customstructure features of OTG+.
 IsOTGPlus: false
@@ -133,6 +136,8 @@ Block(0,1,0,DOUBLE_PLANT:10)
 # BlockCheck(x,y,z,BlockName[,BlockName[,...]]) - one of the blocks must be at the location
 # BlockCheckNot(x,y,z,BlockName[,BlockName[,...]]) - all the blocks must not be at the location
 # LightCheck(x,y,z,minLightLevel,maxLightLevel) - light must be between min and max (inclusive)
+# ModCheck(ModName[,ModName[,...]]) - all the mods listed must be loaded
+# ModCheckNot(ModName[,ModName[,...]]) - all the mods listed must not be loaded
 
 # You can use "Solid" as a BlockName for matching all solid blocks or "All" to match all blocks that aren't air.
 

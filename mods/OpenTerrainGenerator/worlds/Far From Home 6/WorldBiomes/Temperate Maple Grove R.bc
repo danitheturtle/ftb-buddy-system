@@ -299,7 +299,7 @@ FogColor: #000000
 
 # How dense the fog is this biome is, Float value from 0.0 to 1.0.
 # A value of 0 produces almost no fog while a value of 1 will cover the entire screen with fog.
-FogDensity: 0.5
+FogDensity: 0.2
 
 # How much the world time should affect the fog color, Float value from 0.0 to 1.0.
 # A value of 0.0 means the fog will stay the same color all day.
@@ -1521,7 +1521,7 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, HILLS, RIVER
+BiomeDictId: FOREST, HILLS, WATER, RIVER
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures

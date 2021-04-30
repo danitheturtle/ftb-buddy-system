@@ -104,7 +104,7 @@ BiomeSizeWhenBorder: 8
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -2.46
+BiomeHeight: -2.16
 
 # Biome volatility.
 BiomeVolatility: 0.1
@@ -113,7 +113,7 @@ BiomeVolatility: 0.1
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 30
+SmoothRadius: 10
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
@@ -129,9 +129,9 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -3.25
+Volatility1: -0.5
 
-Volatility2: 8.25
+Volatility2: 6.25
 
 # Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
@@ -147,7 +147,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -8.0, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11
+CustomHeightControl: 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 10.0, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11
 
 
 #######################################################################
@@ -232,7 +232,7 @@ ReplacedBlocks: (GLASS,AIR,0,64)
 ################################
 
 # Set this to false to use the "Water / Lava & Frozen States" settings of this biome.
-UseWorldWaterLevel: true
+UseWorldWaterLevel: false
 
 # Set water level. Every empty between this levels will be fill water or another block from WaterBlock.
 WaterLevelMax: 63
@@ -240,7 +240,7 @@ WaterLevelMax: 63
 WaterLevelMin: 0
 
 # Block used as water in WaterLevelMax
-WaterBlock: STATIONARY_WATER:0
+WaterBlock: biomesoplenty:hot_spring_water
 
 # Block used as ice. Ice only spawns if the BiomeTemperture is low enough.
 IceBlock: ICE
@@ -269,13 +269,13 @@ BiomeTemperature: 0.5
 BiomeWetness: 0.5
 
 # Biome sky color.
-SkyColor: #7BA5FF
+SkyColor: #F2EFFB
 
 # Biome water color multiplier.
 WaterColor: #43D5EE
 
 # Biome grass color.
-GrassColor: #85C047
+GrassColor: #48AD61
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
 GrassColor2: #009975
@@ -286,7 +286,7 @@ GrassColor2: #009975
 GrassColorIsMultiplier: false
 
 # Biome foliage color.
-FoliageColor: #8BB76E
+FoliageColor: #9075D7
 
 # Biome foliage color 2, used to create a gradient like vanilla swamp grass,only works when FoliageColorIsMultiplier is set to false.Forge only atm.
 FoliageColor2: #4ADCF9
@@ -295,11 +295,11 @@ FoliageColor2: #4ADCF9
 FoliageColorIsMultiplier: false
 
 # Biome fog color.
-FogColor: #000000
+FogColor: #234326
 
 # How dense the fog is this biome is, Float value from 0.0 to 1.0.
 # A value of 0 produces almost no fog while a value of 1 will cover the entire screen with fog.
-FogDensity: 0.5
+FogDensity: 0.2
 
 # How much the world time should affect the fog color, Float value from 0.0 to 1.0.
 # A value of 0.0 means the fog will stay the same color all day.
@@ -404,14 +404,12 @@ Ore(EMERALD_ORE,7,1,40.0,4,32,STONE:0)
 Ore(DIRT:0,33,10,100.0,0,255,STONE:0)
 Ore(GRAVEL,33,8,100.0,0,255,STONE:0)
 UnderGroundLake(25,60,2,5.0,0,49)
-Liquid(STATIONARY_WATER:0,20,100.0,8,60,STONE:0)
+Liquid(biomesoplenty:hot_spring_water,20,100.0,8,60,STONE:0)
 Liquid(STATIONARY_LAVA:0,10,100.0,8,60,STONE:0)
-SmallLake(STATIONARY_WATER:0,4,7.0,8,119)
-UnderWaterOre(SAND:0,7,3,100.0,DIRT:0,GRASS:0)
-UnderWaterOre(CLAY,4,1,100.0,DIRT:0,CLAY)
-UnderWaterOre(GRAVEL,6,1,100.0,DIRT:0,GRASS:0)
-UnderWaterOre(biomesoplenty:1,3,1,100.0,SAND:0,DIRT:0)
-UnderWaterOre(biomesoplenty:9,3,1,100.0,DIRT:0,SAND:0)
+SmallLake(biomesoplenty:hot_spring_water,4,7.0,8,128)
+UnderWaterOre(CLAY,5,2,100.0,DIRT:0,GRASS:0,CLAY)
+UnderWaterOre(GRAVEL,4,1,50.0,DIRT:0,GRASS:0)
+UnderWaterOre(biomesoplenty:white_sand,11,18,100.0,DIRT:0,GRASS:0)
 Dungeon(8,100.0,0,46)
 Tree(5,zeddlargerock1,3)
 Tree(5,zeddlargerock1mossy,3)
@@ -431,10 +429,6 @@ Tree(5,zeddsmallrock4,3)
 Tree(5,zeddsmallrock4mossy,3)
 Tree(5,zeddsmallrock5,3)
 Tree(5,zeddsmallrock5mossy,3)
-Tree(15,redflower,15)
-Tree(15,yellowflower,15)
-Tree(50,ycfloweringgrass,50)
-Tree(50,ycfloweringgrass,50)
 CustomObject(sponge)
 Ore(DIRT:1,8,4,4.0,0,255,DIRT:0)
 Tree(20,fallentreeoak,20)
@@ -467,7 +461,7 @@ Tree(5,bopwhitecherry3,10)
 Tree(5,bopwhitecherry4,10)
 Tree(5,bopwhitecherry5,10)
 Tree(80,grass,80)
-Tree(5,leafpile,20)
+Tree(500,leafpile,20)
 Tree(5,deadleafpile_grass,20)
 Tree(80,grass,80)
 Tree(5,leafpile,20)
@@ -946,16 +940,12 @@ Tree(80,grassmedium,40)
 Tree(80,grassmedium,40)
 Tree(80,grassmedium,40)
 Tree(80,grassmedium,40)
-Tree(50,oxeyedaisy,50)
-Tree(50,pinktulip,50)
-Tree(50,flax,50)
-Tree(50,wildflower,50)
-Plant(RoseBush,1,25.0,63,255,GRASS:0,DIRT:0)
-Tree(50,oxeyedaisy,50)
-Tree(50,pinktulip,50)
-Tree(50,flax,50)
-Tree(50,wildflower,50)
-Plant(RoseBush,1,25.0,63,255,GRASS:0,DIRT:0)
+Tree(80,lilac,50)
+Tree(80,flax,50)
+Grass(minecraft:red_flower:3,NotGrouped,8,20,GRASS:0)
+Grass(biomesoplenty:flower_0:7,NotGrouped,8,20,GRASS:0)
+Grass(minecraft:red_flower:7,NotGrouped,8,20,GRASS:0)
+Grass(minecraft:red_flower:8,NotGrouped,8,20,GRASS:0)
 Tree(80,grass,80)
 Tree(5,leafpile,20)
 Tree(5,deadleafpile_grass,20)
@@ -1339,7 +1329,7 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, PLAINS, MAGICAL, THEMED_TREES, RIVER
+BiomeDictId: FOREST, DENSE, MAGICAL, MUSHROOM, THEMED_TREES, WATER, RIVER
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures
