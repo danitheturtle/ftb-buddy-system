@@ -70,7 +70,7 @@ IsleInBiome: Coniferous Woods
 BiomeSizeWhenIsle: 5
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 98
+BiomeRarityWhenIsle: 120
 
 ######################
 # Border biomes only #

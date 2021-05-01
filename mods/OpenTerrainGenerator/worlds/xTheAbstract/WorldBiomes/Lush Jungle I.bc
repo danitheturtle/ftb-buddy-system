@@ -70,7 +70,7 @@ IsleInBiome: Lush Jungle
 BiomeSizeWhenIsle: 5
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 99
+BiomeRarityWhenIsle: 130
 
 ######################
 # Border biomes only #

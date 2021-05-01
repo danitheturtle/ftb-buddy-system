@@ -5,18 +5,22 @@
     "go in and remove some of the trees spawned in the OTG config for more generic biomes. thatll give recurrent complex the space it needs to fill in missing trees without excessive clutter",
     {
       "completed biomes": [
+        "Anvil Mountains (abstract only)",
         "Temperate Forest",
+        "Temperate Maple Grove",
+        "Temperate Forest Flowers",
         "Temperate Birch Forest",
         "Elder Swamp",
         "Coniferous Woods",
         "2Great Alps",
-        "Anvil Mountains (abstract only)",
         "Cherry Islands",
         "Dunes",
         "Scorched Mesa",
         "Bonzai Jungle",
         "Jaded Hills",
+        "Jaded Hills H",
         "Lush Jungle",
+        "Magic Roofed Forest",
         "Mahogany Thicket",
         "Old Sequoia Forest"
       ]

@@ -33,7 +33,7 @@ ResourceInheritance: true
 #   Isle biomes:   BiomeSizeWhenIsle (see below)
 #   Border biomes: BiomeSizeWhenBorder (see below)
 #   River biomes:  RiverSize (see WorldConfig)
-BiomeSize: 8
+BiomeSize: 3
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -45,12 +45,12 @@ BiomeRarity: 40
 
 # The hexadecimal color value of this biome. Used in the output of the /otg map command,
 # and used in the input of BiomeMode: FromImage.
-BiomeColor: #0000FF
+BiomeColor: #FFFFFF
 
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Dry Tropics
+ReplaceToBiomeName:
 
 ####################
 # Isle biomes only #
@@ -92,7 +92,7 @@ NotBorderNear:
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* borders. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenBorder number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenBorder: 8
+BiomeSizeWhenBorder: 7
 
 
 #######################################################################
@@ -104,16 +104,16 @@ BiomeSizeWhenBorder: 8
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -2.46
+BiomeHeight: -2.01
 
 # Biome volatility.
-BiomeVolatility: 0.1
+BiomeVolatility: 0.4
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 30
+SmoothRadius: 0
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
@@ -129,7 +129,7 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -3.25
+Volatility1: -0.25
 
 Volatility2: 8.25
 
@@ -147,7 +147,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -8.0, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11
+CustomHeightControl: 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 35.11, 39.11, 55.11, 4.11, 0.11, 0.11, -25.11, -50.11, -50.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11, -9.11
 
 
 #######################################################################
@@ -166,7 +166,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -8.0, -9.11, -9.11, -9.1
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Sandy Hills R
+RiverBiome: Sandy Savanna R
 
 #######################
 # ImprovedRivers:true #
@@ -216,7 +216,7 @@ GroundBlock: DIRT:0
 
 # Alternatively, you can use Mesa, MesaForest or MesaBryce to get blocks
 # like the blocks found in the Mesa biomes.
-SurfaceAndGroundControl: SAND:0, DIRT:0, -3.0, GRASS:0, DIRT:0, 3.0, SAND:0, DIRT:0, 7.0 
+SurfaceAndGroundControl: SAND:0, DIRT:0, -1.75, GRASS:0, DIRT:0, 1.75, SAND:0, DIRT:0, 7.0 
 
 # Replace Variable: (blockFrom,blockTo[:blockDataTo][,minHeight,maxHeight])
 # Example :
@@ -261,7 +261,7 @@ CooledLavaBlock: STATIONARY_LAVA:0
 # When this value is around 0.2, snow will fall on mountain peaks above y=90.
 # When this value is around 0.1, the whole biome will be covered in snow and ice.
 # However, on default biomes, this won't do anything except changing the grass and leaves colors slightly.
-BiomeTemperature: 0.22
+BiomeTemperature: 1.0
 
 # Biome wetness. Float value from 0.0 to 1.0.
 # If this biome is a custom biome, and this value is set to 0, no rain will fall.
@@ -1529,12 +1529,12 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, HILLS, HOT, SANDY
+BiomeDictId: SAVANNA, HILLS, HOT, DRY, SANDY
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures
 # and SpawnAmbientCreatures settings. Any mob type defined using those settings
 # will override inherited mob settings for the same mob.
 # Use this setting to inherit modded mobs from vanilla biomes (see also: BiomeDictId)
-InheritMobsBiomeName: Forest
+InheritMobsBiomeName: Savanna
 

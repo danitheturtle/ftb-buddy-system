@@ -67,10 +67,10 @@ IsleInBiome: Scorched Mesa
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 9
+BiomeSizeWhenIsle: 8
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 98
+BiomeRarityWhenIsle: 120
 
 ######################
 # Border biomes only #

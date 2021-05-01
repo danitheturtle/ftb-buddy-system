@@ -70,7 +70,7 @@ IsleInBiome: 2Great Alps
 BiomeSizeWhenIsle: 6
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 99
+BiomeRarityWhenIsle: 120
 
 ######################
 # Border biomes only #
