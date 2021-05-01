@@ -33,7 +33,7 @@ ResourceInheritance: true
 #   Isle biomes:   BiomeSizeWhenIsle (see below)
 #   Border biomes: BiomeSizeWhenBorder (see below)
 #   River biomes:  RiverSize (see WorldConfig)
-BiomeSize: 3
+BiomeSize: 8
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -45,7 +45,7 @@ BiomeRarity: 40
 
 # The hexadecimal color value of this biome. Used in the output of the /otg map command,
 # and used in the input of BiomeMode: FromImage.
-BiomeColor: #FFFFFF
+BiomeColor: #0000FF
 
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
@@ -92,7 +92,7 @@ NotBorderNear:
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* borders. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenBorder number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenBorder: 7
+BiomeSizeWhenBorder: 8
 
 
 #######################################################################
@@ -104,7 +104,7 @@ BiomeSizeWhenBorder: 7
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -1.96
+BiomeHeight: -2.46
 
 # Biome volatility.
 BiomeVolatility: 2.8
@@ -113,7 +113,7 @@ BiomeVolatility: 2.8
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 30
+SmoothRadius: 16
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
@@ -144,7 +144,6 @@ DisableBiomeHeight: false
 
 CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
 
-
 #######################################################################
 # +-----------------------------------------------------------------+ #
 # |                              Rivers                             | #
@@ -161,7 +160,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Roofed Forest R
+RiverBiome: Magic Roofed Forest R
 
 #######################
 # ImprovedRivers:true #
@@ -404,7 +403,7 @@ Liquid(STATIONARY_LAVA:0,10,100.0,8,60,STONE:0)
 SmallLake(biomesoplenty:hot_spring_water,4,7.0,8,128)
 UnderWaterOre(CLAY,5,2,100.0,DIRT:0,GRASS:0,CLAY)
 UnderWaterOre(GRAVEL,4,1,50.0,DIRT:0,GRASS:0)
-UnderWaterOre(biomesoplenty:white_sand,11,18,100.0,DIRT:0,GRASS:0)
+UnderWaterOre(biomesoplenty:white_sand,11,20,100.0,DIRT:0,GRASS:0)
 Dungeon(8,100.0,0,46)
 Tree(5,zeddlargerock1,3)
 Tree(5,zeddlargerock1mossy,3)
@@ -437,24 +436,32 @@ Tree(20,fallentreeoak8,20)
 Tree(5,minersdelight_stone,5)
 CustomStructure(branchingStart,15.0)
 Ore(PACKED_ICE,8,20,20.0,0,255,biomesoplenty:hard_ice)
-Tree(70,zdarkoak1s1,40)
-Tree(70,zdarkoak2s1,40)
-Tree(70,zdarkoak3s1,40)
-Tree(70,zdarkoak4s1,40)
-Tree(70,zdarkoak5s1,40)
-Tree(70,zdarkoak6s1,40)
-Tree(70,zdarkoak7s1,40)
-Tree(70,zdarkoak8s1,40)
-Tree(5,boppinkcherry1,20)
-Tree(5,boppinkcherry2,20)
-Tree(5,boppinkcherry3,20)
-Tree(5,boppinkcherry4,20)
-Tree(5,boppinkcherry5,20)
-Tree(5,bopwhitecherry1,20)
-Tree(5,bopwhitecherry2,20)
-Tree(5,bopwhitecherry3,20)
-Tree(5,bopwhitecherry4,20)
-Tree(5,bopwhitecherry5,20)
+Tree(50,zdarkoak1s1,40)
+Tree(50,zdarkoak2s1,40)
+Tree(50,zdarkoak3s1,40)
+Tree(50,zdarkoak4s1,40)
+Tree(50,zdarkoak5s1,40)
+Tree(50,zdarkoak6s1,40)
+Tree(50,zdarkoak7s1,40)
+Tree(50,zdarkoak8s1,40)
+Tree(50,zdarkoak1s1,40)
+Tree(50,zdarkoak2s1,40)
+Tree(50,zdarkoak3s1,40)
+Tree(50,zdarkoak4s1,40)
+Tree(50,zdarkoak5s1,40)
+Tree(50,zdarkoak6s1,40)
+Tree(50,zdarkoak7s1,40)
+Tree(50,zdarkoak8s1,40)
+Tree(5,boppinkcherry1,10)
+Tree(5,boppinkcherry2,10)
+Tree(5,boppinkcherry3,10)
+Tree(5,boppinkcherry4,10)
+Tree(5,boppinkcherry5,10)
+Tree(5,bopwhitecherry1,10)
+Tree(5,bopwhitecherry2,10)
+Tree(5,bopwhitecherry3,10)
+Tree(5,bopwhitecherry4,10)
+Tree(5,bopwhitecherry5,10)
 Tree(80,grass,80)
 Tree(500,leafpile,20)
 Tree(5,deadleafpile_grass,20)
@@ -1324,12 +1331,12 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, DENSE, MAGICAL, MUSHROOM, THEMED_TREES
+BiomeDictId: FOREST, DENSE, MAGICAL, MUSHROOM, THEMED_TREES, WATER, RIVER
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures
 # and SpawnAmbientCreatures settings. Any mob type defined using those settings
 # will override inherited mob settings for the same mob.
 # Use this setting to inherit modded mobs from vanilla biomes (see also: BiomeDictId)
-InheritMobsBiomeName: Forest
+InheritMobsBiomeName: River
 

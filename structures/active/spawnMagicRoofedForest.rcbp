@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "biomes": "$FOREST \u0026 $DENSE \u0026 $MAGICAL \u0026 $MUSHROOM \u0026 $THEMED_TREES",
+      "weight": 2.0
+    }
+  ],
+  "metadata": {
+    "title": "Magical Roofed Forest (BS)",
+    "description": [
+      "Spawns trees in the magical roofed forest biome"
+    ]
+  }
+}

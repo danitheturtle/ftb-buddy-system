@@ -61,7 +61,7 @@ ReplaceToBiomeName:
 
 # List of biomes in which this biome will spawn as an isle.
 # For example, Mushroom Isles spawn inside the Ocean biome.
-IsleInBiome: Roofed Forest2
+IsleInBiome: Magic Roofed Forest
 
 # Size of this biome when spawned as an isle biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
@@ -104,16 +104,16 @@ BiomeSizeWhenBorder: 7
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -1.86
+BiomeHeight: -1.96
 
 # Biome volatility.
-BiomeVolatility: 0.4
+BiomeVolatility: 2.8
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 10
+SmoothRadius: 15
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
@@ -129,15 +129,11 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: 0.01
-
-Volatility2: 3.25
-
-# Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
+Volatility1: -4.65
+Volatility2: -6.25
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.95
-
+VolatilityWeight2: 1.0
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false
 
@@ -145,9 +141,8 @@ DisableBiomeHeight: false
 # blocks height, starting at the bottom of the world. Positive entry - larger chance of spawn blocks, negative - smaller
 # Values which affect your configuration may be found only experimentally. Values may be very big, like ~3000.0 depends from height
 # Example:
-#   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-# Makes empty layer above bedrock layer. 
-CustomHeightControl: 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 40.0, 23.61, 13.11, 2.41, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11
+
+CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.51, 5.0, -2.0, -2.0, 5.0, 10.11, 6.11, 6.11, 6.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
 
 
 #######################################################################
@@ -166,7 +161,7 @@ CustomHeightControl: 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 40.0, 23.61, 13.1
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Roofed Forest R
+RiverBiome: Magic Roofed Forest R
 
 #######################
 # ImprovedRivers:true #
@@ -409,7 +404,7 @@ Liquid(STATIONARY_LAVA:0,10,100.0,8,60,STONE:0)
 SmallLake(biomesoplenty:hot_spring_water,4,7.0,8,128)
 UnderWaterOre(CLAY,5,2,100.0,DIRT:0,GRASS:0,CLAY)
 UnderWaterOre(GRAVEL,4,1,50.0,DIRT:0,GRASS:0)
-UnderWaterOre(biomesoplenty:white_sand,11,18,100.0,DIRT:0,GRASS:0)
+UnderWaterOre(biomesoplenty:white_sand,11,20,100.0,DIRT:0,GRASS:0)
 Dungeon(8,100.0,0,46)
 Tree(5,zeddlargerock1,3)
 Tree(5,zeddlargerock1mossy,3)
@@ -442,14 +437,22 @@ Tree(20,fallentreeoak8,20)
 Tree(5,minersdelight_stone,5)
 CustomStructure(branchingStart,15.0)
 Ore(PACKED_ICE,8,20,20.0,0,255,biomesoplenty:hard_ice)
-Tree(70,zdarkoak1s1,40)
-Tree(70,zdarkoak2s1,40)
-Tree(70,zdarkoak3s1,40)
-Tree(70,zdarkoak4s1,40)
-Tree(70,zdarkoak5s1,40)
-Tree(70,zdarkoak6s1,40)
-Tree(70,zdarkoak7s1,40)
-Tree(70,zdarkoak8s1,40)
+Tree(50,zdarkoak1s1,40)
+Tree(50,zdarkoak2s1,40)
+Tree(50,zdarkoak3s1,40)
+Tree(50,zdarkoak4s1,40)
+Tree(50,zdarkoak5s1,40)
+Tree(50,zdarkoak6s1,40)
+Tree(50,zdarkoak7s1,40)
+Tree(50,zdarkoak8s1,40)
+Tree(50,zdarkoak1s1,40)
+Tree(50,zdarkoak2s1,40)
+Tree(50,zdarkoak3s1,40)
+Tree(50,zdarkoak4s1,40)
+Tree(50,zdarkoak5s1,40)
+Tree(50,zdarkoak6s1,40)
+Tree(50,zdarkoak7s1,40)
+Tree(50,zdarkoak8s1,40)
 Tree(10,boppinkcherry1,10)
 Tree(10,boppinkcherry2,10)
 Tree(10,boppinkcherry3,10)
