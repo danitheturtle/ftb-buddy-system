@@ -86,7 +86,7 @@ BiomeIsBorder: Great Ocean
 
 # List of biomes that cancel spawning of this biome.
 # For example, the Beach biome will never spawn next to an Extreme Hills biome.
-NotBorderNear: Cherry Islands, Coniferous Woods, Stone Slopes, Magic Oak Forest, Maple Grove, Pine Forest, Sequoia Forest, Elder Swamp, Jaded Hills, Seasonal Oak, Temperate Forest, Umbran Deadlands, Roofed Forest2, Temperate Birch Forest, Stone Mesa, Great Alps, Snowy Wasteland, Snow Mountains, Scorched Mesa, Scorched Mountains
+NotBorderNear: Cherry Islands, Coniferous Woods, Stone Slopes, Magic Oak Forest, Maple Grove, Pine Forest, Sequoia Forest, Elder Swamp, Jaded Hills, Seasonal Oak, Temperate Forest, Umbran Deadlands, Roofed Forest2, Temperate Birch Forest, Stone Mesa, Great Alps, Snowy Wasteland, Snow Mountains, Scorched Mesa, Gay Mountains
 
 # Size of this biome when spawned as a border biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.

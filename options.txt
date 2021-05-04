@@ -15,8 +15,8 @@ difficulty:2
 fancyGraphics:true
 ao:2
 renderClouds:true
-resourcePacks:[]
-incompatibleResourcePacks:[]
+resourcePacks:["buddy-splashscreen"]
+incompatibleResourcePacks:["buddy-splashscreen"]
 lastServer:localhost
 lang:en_us
 chatVisibility:0
