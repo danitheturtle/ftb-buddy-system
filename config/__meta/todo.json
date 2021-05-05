@@ -6,7 +6,6 @@
     {
       "completed biomes": [
         "Anvil Mountains (abstract only)",
-        "Scorched Caverns (abstract only)",
         "Temperate Forest",
         "Temperate Maple Grove",
         "Temperate Forest Flowers",
@@ -23,7 +22,9 @@
         "Lush Jungle",
         "Magic Roofed Forest",
         "Mahogany Thicket",
-        "Old Sequoia Forest"
+        "Old Sequoia Forest",
+        "Gay Mountains",
+        "Sandy Savanna"
       ]
     },
 

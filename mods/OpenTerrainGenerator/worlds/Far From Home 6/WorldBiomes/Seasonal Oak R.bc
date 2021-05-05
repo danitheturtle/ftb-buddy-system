@@ -50,7 +50,7 @@ BiomeColor: #0000FF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Temporal Hinterlands
+ReplaceToBiomeName:
 
 ####################
 # Isle biomes only #
@@ -278,7 +278,7 @@ WaterColor: #43D5EE
 GrassColor: #85C047
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
-GrassColor2: #5A935F
+GrassColor2: #6BA555
 
 # Whether the grass color is a multiplier.
 # If you set it to true, the color will be based on this value, the BiomeTemperature and the BiomeWetness.
@@ -431,8 +431,6 @@ Tree(5,zeddsmallrock4,3)
 Tree(5,zeddsmallrock4mossy,3)
 Tree(5,zeddsmallrock5,3)
 Tree(5,zeddsmallrock5mossy,3)
-Tree(50,ycfloweringgrass,50)
-Tree(50,ycfloweringgrass,50)
 CustomObject(sponge)
 Ore(DIRT:1,8,4,4.0,0,255,DIRT:0)
 Tree(20,fallentreeoak,20)
@@ -446,16 +444,17 @@ Tree(20,fallentreeoak8,20)
 Tree(5,minersdelight_stone,5)
 CustomStructure(branchingStart,15.0)
 Ore(PACKED_ICE,8,20,20.0,0,255,biomesoplenty:hard_ice)
-Tree(60,uoak1s1,50)
-Tree(60,uoak2s1,50)
-Tree(60,uoak3s1,50)
-Tree(60,uoak4s1,50)
-Tree(60,uoak5s1,50)
-Tree(60,uorangeautumn1s1,50)
-Tree(60,uyellowautumn1s1,50)
+Tree(20,uoak1s1,50)
+Tree(20,uoak2s1,50)
+Tree(20,uoak3s1,50)
+Tree(20,uoak4s1,50)
+Tree(20,uoak5s1,50)
+Tree(80,uorangeautumn1s1,50)
+Tree(80,uyellowautumn1s1,50)
+Grass(biomesoplenty:plant_0:12,Grouped,16,85,GRASS:0)
+Grass(biomesoplenty:plant_0:10,Grouped,10,85,GRASS:0)
+Tree(80,leafpile,50)
 Tree(80,grass,80)
-Tree(5,leafpile,20)
-Tree(5,deadleafpile_grass,20)
 Tree(80,grass,80)
 Tree(5,leafpile,20)
 Tree(5,deadleafpile_grass,20)
@@ -1324,7 +1323,7 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, PLAINS
+BiomeDictId: FOREST
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures
