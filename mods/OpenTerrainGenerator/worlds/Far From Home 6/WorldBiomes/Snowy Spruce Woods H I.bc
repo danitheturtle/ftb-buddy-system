@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Arctic Regions
+ReplaceToBiomeName: Snowy Spruce Woods H
 
 ####################
 # Isle biomes only #
@@ -67,10 +67,10 @@ IsleInBiome: Snowy Spruce Woods H
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 9
+BiomeSizeWhenIsle: 7
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 99
+BiomeRarityWhenIsle: 120
 
 ######################
 # Border biomes only #
@@ -482,21 +482,7 @@ Grass(biomesoplenty:waterlily:2,Grouped,9,9.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily:1,Grouped,9,9.0,STATIONARY_WATER:0)
 Grass(biomesoplenty:waterlily,Grouped,9,9.0,STATIONARY_WATER:0)
 Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
-Tree(30,reeds,30)
+Grass(biomesoplenty:plant_0:10,Grouped,14,85,GRASS:0)
 Tree(80,snowlayer_leaves,90)
 Tree(80,snowlayer_leaves,90)
 Tree(80,snowlayer_leaves,90)
@@ -1788,7 +1774,7 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: FOREST, HILLS, Spruce, DENSE
+BiomeDictId: FOREST, CONIFEROUS, DENSE, HILLS
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures

@@ -33,7 +33,7 @@ ResourceInheritance: true
 #   Isle biomes:   BiomeSizeWhenIsle (see below)
 #   Border biomes: BiomeSizeWhenBorder (see below)
 #   River biomes:  RiverSize (see WorldConfig)
-BiomeSize: 2
+BiomeSize: 3
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -41,7 +41,7 @@ BiomeSize: 2
 #   50 rarity mean 1/11 chance than other
 # For isle biomes see the BiomeRarityWhenIsle setting below.
 # Doesn`t work on Ocean and River (frozen versions too) biomes when not added as normal biome.
-BiomeRarity: 140
+BiomeRarity: 40
 
 # The hexadecimal color value of this biome. Used in the output of the /otg map command,
 # and used in the input of BiomeMode: FromImage.
@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Anvil Mountains
+ReplaceToBiomeName:
 
 ####################
 # Isle biomes only #
@@ -61,16 +61,16 @@ ReplaceToBiomeName: Anvil Mountains
 
 # List of biomes in which this biome will spawn as an isle.
 # For example, Mushroom Isles spawn inside the Ocean biome.
-IsleInBiome: 
+IsleInBiome: Stone Steppes
 
 # Size of this biome when spawned as an isle biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 6
+BiomeSizeWhenIsle: 5
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 99
+BiomeRarityWhenIsle: 110
 
 ######################
 # Border biomes only #
@@ -107,7 +107,7 @@ BiomeSizeWhenBorder: 5
 BiomeHeight: -1.64
 
 # Biome volatility.
-BiomeVolatility: 5.2
+BiomeVolatility: 4.2
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
@@ -147,7 +147,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+CustomHeightControl: 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
 
 
 #######################################################################

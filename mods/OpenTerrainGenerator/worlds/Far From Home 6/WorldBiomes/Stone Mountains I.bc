@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Anvil Mountains
+ReplaceToBiomeName: Stone Mountains
 
 ####################
 # Isle biomes only #
@@ -61,16 +61,16 @@ ReplaceToBiomeName: Anvil Mountains
 
 # List of biomes in which this biome will spawn as an isle.
 # For example, Mushroom Isles spawn inside the Ocean biome.
-IsleInBiome: 
+IsleInBiome: Stone Mountains
 
 # Size of this biome when spawned as an isle biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 10
+BiomeSizeWhenIsle: 8
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 99
+BiomeRarityWhenIsle: 120
 
 ######################
 # Border biomes only #
@@ -107,7 +107,7 @@ BiomeSizeWhenBorder: 5
 BiomeHeight: -1.64
 
 # Biome volatility.
-BiomeVolatility: 8.2
+BiomeVolatility: 6.2
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
@@ -147,7 +147,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+CustomHeightControl: 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
 
 
 #######################################################################
@@ -166,7 +166,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.11, 8.11, 8.11, 8.11, 
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Stone Mountains R
+RiverBiome: Stone Mountains I
 
 #######################
 # ImprovedRivers:true #

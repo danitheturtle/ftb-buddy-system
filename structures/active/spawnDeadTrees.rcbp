@@ -1,15 +1,11 @@
 {
   "data": [
     {
-      "biomes": "$THEMED_TREES",
+      "biomes": "$THEMED_TREES | $MESA | $SAVANNA | $BEACH | $NETHER | $VOID | $END | $WATER | $MUSHROOM | $MAGICAL",
       "weight": 0.0
     },
     {
-      "biomes": "$NETHER | $VOID | $END | $WATER | $SAVANNA | $JUNGLE | $LUSH | $DENSE",
-      "weight": 0.0
-    },
-    {
-      "biomes": "$SPOOKY | $WASTELAND",
+      "biomes": "$SPOOKY | $WASTELAND | $DEAD",
       "weight": 0.5
     },
     {

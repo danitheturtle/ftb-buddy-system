@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Stone Slopes
+ReplaceToBiomeName: Stone Steppes
 
 ####################
 # Isle biomes only #
@@ -82,7 +82,7 @@ BiomeRarityWhenIsle: 99
 # List of biomes this biome can be a border of.
 # For example, the Beach biome is a border on the Ocean biome, so
 # it can spawn anywhere on the border of an ocean.
-BiomeIsBorder: Stone Slopes
+BiomeIsBorder: Stone Steppes
 
 # List of biomes that cancel spawning of this biome.
 # For example, the Beach biome will never spawn next to an Extreme Hills biome.
@@ -166,7 +166,7 @@ CustomHeightControl: 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 10.0, 10.0,
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Stone Slopes R
+RiverBiome: Stone Steppes R
 
 #######################
 # ImprovedRivers:true #
