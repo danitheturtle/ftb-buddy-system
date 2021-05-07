@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Dry Tropics
+ReplaceToBiomeName: Tall Jungle
 
 ####################
 # Isle biomes only #
@@ -67,10 +67,10 @@ IsleInBiome: Tall Jungle
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 9
+BiomeSizeWhenIsle: 7
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 99
+BiomeRarityWhenIsle: 120
 
 ######################
 # Border biomes only #
@@ -275,7 +275,7 @@ SkyColor: #7BA5FF
 WaterColor: #43D5EE
 
 # Biome grass color.
-GrassColor: #85C047
+GrassColor: #6CA655
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
 GrassColor2: #5A935F
@@ -286,13 +286,13 @@ GrassColor2: #5A935F
 GrassColorIsMultiplier: false
 
 # Biome foliage color.
-FoliageColor: #FFFFFF
+FoliageColor: #5A935F
 
 # Biome foliage color 2, used to create a gradient like vanilla swamp grass,only works when FoliageColorIsMultiplier is set to false.Forge only atm.
-FoliageColor2: #FFFFFF
+FoliageColor2: #5A935F
 
 # Whether the foliage color is a multiplier. See GrassColorIsMultiplier for details.
-FoliageColorIsMultiplier: true
+FoliageColorIsMultiplier: false
 
 # Biome fog color.
 FogColor: #000000

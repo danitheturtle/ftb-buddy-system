@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Anvil Mountains
+ReplaceToBiomeName:
 
 ####################
 # Isle biomes only #
@@ -107,7 +107,8 @@ BiomeSizeWhenBorder: 5
 BiomeHeight: -1.96
 
 # Biome volatility.
-BiomeVolatility: 2.8
+BiomeVolatility: 16.4
+
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
@@ -128,11 +129,15 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -6.65
-Volatility2: -6.25
+Volatility1: -3.25
+
+Volatility2: 8.25
+
+# Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.0
+VolatilityWeight2: 1.95
+
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false
 
@@ -140,8 +145,10 @@ DisableBiomeHeight: false
 # blocks height, starting at the bottom of the world. Positive entry - larger chance of spawn blocks, negative - smaller
 # Values which affect your configuration may be found only experimentally. Values may be very big, like ~3000.0 depends from height
 # Example:
+#   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+# Makes empty layer above bedrock layer. 
+CustomHeightControl: 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 10.0, 10.0, 5.0, 5.0, 0.0, 0.0, -5.0, -5.0, -10.0, -10.0, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11
 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -159,7 +166,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Stone Slopes
+RiverBiome: Stone Slopes R
 
 #######################
 # ImprovedRivers:true #
@@ -178,7 +185,8 @@ RiverVolatility: 2.4
 RiverWaterLevel: 63
 
 # Works the same as CustomHeightControl (scroll up), but is used where a river is generated in this biome
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -16.0, -10.0, 10.0, 5.0, 5.0, 0.0, 0.0, -5.0, -5.0, -10.0, -10.0, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -343,6 +351,7 @@ FogThunderWeight: 0.5
 # Well(BaseBlockName,HalfSlabBlockName,WaterBlockName,Frequency,Rarity,MinAltitude,MaxAltitude,BlockSource[,BlockSource2,..])
 # Boulder(BlockName,Frequency,Rarity,MinAltitude,MaxAltitude,BlockSource[,BlockSource2,..]
 # IceSpike(BlockName,IceSpikeType,Frequency,Rarity,MinAltitude,MaxAltitude,Blocksource[,BlockSource2,...])
+# Fossil(Rarity)
 
 # BlockName:      must be the name of a block. May include block data, like "WOOL:1".
 # BlockSource:    list of blocks the resource can spawn on/in. You can also use "Solid" or "All".

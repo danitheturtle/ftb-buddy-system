@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Dry Tropics
+ReplaceToBiomeName: Tall Jungle
 
 ####################
 # Isle biomes only #
@@ -67,10 +67,10 @@ IsleInBiome: Tall Jungle
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 9
+BiomeSizeWhenIsle: 7
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 99
+BiomeRarityWhenIsle: 120
 
 ######################
 # Border biomes only #
@@ -107,12 +107,13 @@ BiomeSizeWhenBorder: 7
 BiomeHeight: -1.96
 
 # Biome volatility.
-BiomeVolatility: 2.8
+BiomeVolatility: 3.2
+
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 30
+SmoothRadius: 20
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
@@ -128,8 +129,8 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -6.65
-Volatility2: -6.25
+Volatility1: -4.65
+Volatility2: -4.25
 VolatilityWeight1: 1.95
 
 VolatilityWeight2: 1.0
@@ -178,7 +179,8 @@ RiverVolatility: 0.3
 RiverWaterLevel: 63
 
 # Works the same as CustomHeightControl (scroll up), but is used where a river is generated in this biome
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.0, 7.61, 9.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -267,7 +269,7 @@ SkyColor: #7BA5FF
 WaterColor: #43D5EE
 
 # Biome grass color.
-GrassColor: #85C047
+GrassColor: #6CA655
 
 # Biome grass color 2, used to create a gradient like vanilla swamps,only works when GrassColorIsMultiplier is set to false.Forge only atm.
 GrassColor2: #5A935F
@@ -278,13 +280,13 @@ GrassColor2: #5A935F
 GrassColorIsMultiplier: false
 
 # Biome foliage color.
-FoliageColor: #FFFFFF
+FoliageColor: #5A935F
 
 # Biome foliage color 2, used to create a gradient like vanilla swamp grass,only works when FoliageColorIsMultiplier is set to false.Forge only atm.
-FoliageColor2: #FFFFFF
+FoliageColor2: #5A935F
 
 # Whether the foliage color is a multiplier. See GrassColorIsMultiplier for details.
-FoliageColorIsMultiplier: true
+FoliageColorIsMultiplier: false
 
 # Biome fog color.
 FogColor: #000000
@@ -343,6 +345,7 @@ FogThunderWeight: 0.5
 # Well(BaseBlockName,HalfSlabBlockName,WaterBlockName,Frequency,Rarity,MinAltitude,MaxAltitude,BlockSource[,BlockSource2,..])
 # Boulder(BlockName,Frequency,Rarity,MinAltitude,MaxAltitude,BlockSource[,BlockSource2,..]
 # IceSpike(BlockName,IceSpikeType,Frequency,Rarity,MinAltitude,MaxAltitude,Blocksource[,BlockSource2,...])
+# Fossil(Rarity)
 
 # BlockName:      must be the name of a block. May include block data, like "WOOL:1".
 # BlockSource:    list of blocks the resource can spawn on/in. You can also use "Solid" or "All".

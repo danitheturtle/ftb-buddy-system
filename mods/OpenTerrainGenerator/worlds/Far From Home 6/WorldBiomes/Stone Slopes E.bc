@@ -50,7 +50,7 @@ BiomeColor: #FFFFFF
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.To replace to minecraft biomes use resourcelocation notation, for instance: minecraft:plains.
-ReplaceToBiomeName: Anvil Mountains
+ReplaceToBiomeName: Stone Slopes
 
 ####################
 # Isle biomes only #
@@ -147,7 +147,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Makes empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.0, 10.0, 10.0, 5.0, 5.0, 0.0, 0.0, -5.0, -5.0, -10.0, -10.0, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11
+CustomHeightControl: 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 16.0, 10.0, 10.0, 5.0, 5.0, 0.0, 0.0, -5.0, -5.0, -10.0, -10.0, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11, -10.11
 
 
 #######################################################################
@@ -166,7 +166,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.0, 10.0, 10.0, 5.0, 5
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: Stone Slopes E
+RiverBiome: Stone Slopes R
 
 #######################
 # ImprovedRivers:true #
