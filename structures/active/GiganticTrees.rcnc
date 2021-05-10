@@ -1,0 +1,12 @@
+{
+  "defaultSpawnChance": 0.09,
+  "generationInfos": [],
+  "structureMinCap": 5.0,
+  "spawnDistanceMultiplier": 0.0,
+  "spawnDistanceMultiplierCap": 1.0,
+  "selectableInGUI": true,
+  "title": "Gigantic Trees",
+  "tooltip": [
+    "Gigantic trees that act as weenies in forest biomes"
+  ]
+}

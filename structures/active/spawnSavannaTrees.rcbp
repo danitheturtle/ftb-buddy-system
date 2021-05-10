@@ -5,8 +5,8 @@
       "weight": 0.0
     },
     {
-      "biomes": "$HOT & $DRY & ($MESA | $SAVANNA | $PLAINS)",
-      "weight": 1.0
+      "biomes": "$HOT \u0026 $DRY \u0026 ($MESA | $SAVANNA | $PLAINS)",
+      "weight": 0.5043042898178101
     }
   ],
   "metadata": {

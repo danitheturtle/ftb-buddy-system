@@ -1,9 +1,5 @@
 {
-  "worldgen": [
-    "go to every biome and redefine the categories it belongs to. Only very specific biomes should have THEMED_TREES as an attribute",
-    "Demystify stuff like coniferous being tagged where it doesn't make sense on an oak forest. That type of thing. We want the tree spawn filters to reliably place trees in biomes they are supposed to be in",
-    "go in and remove some of the trees spawned in the OTG config for more generic biomes. thatll give recurrent complex the space it needs to fill in missing trees without excessive clutter",
-    {
+  "worldgen": [{
       "completed biomes": [
         "Anvil Mountains (abstract only)",
         "Temperate Forest",
@@ -35,12 +31,14 @@
       ]
     },
 
-    "Define biome rules for every type of tree. THEMED_TREES biome filter should now work 100% of the time.",
-    "Give all the current trees a once-over for bad data. Ensure they're spawning in their respective biomes based on the rules I set up",
-    "Organize RC structures into folders. Load each one and remove bad ones. Ensure they spawn in the right biomes, while still spawning in as many as possible",
+    "Instead of NormalBiomes, create BiomeGroups that make sense based on biome type",
+    "Now that they all exist, go to each biome and redefine the categories it belongs to enough so every biome can be uniquely identified by its BiomeDict signature",
+
+    "Organize RC structures into folders. Load each one and remove bad ones.",
     "convert ruins builds to recurrent complex ones. will need to have a temp install of the ruins mod, but the goal is to depricate it completely",
     "download epic tree pack saves and explore https://www.reddit.com/r/Worldpainter/comments/2cgxo7/list_of_downloadable_custom_trees/",
     "Sort through tree packs and import the good ones into recurrent complex",
+    "Continue to iterate the different spawnTreeType config files",
 
     "find all mods that generate ore. Disable the generation, and make a list of ore names /w id's and a rough rarity rating 1-10",
     "use customoregen mod in tandem with Sprocket to generate ore XML files. Here's the homepage for the scripting tool: https://github.com/reteo/Sprocket",

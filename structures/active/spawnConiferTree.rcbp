@@ -14,7 +14,7 @@
     },
     {
       "biomes": "!$CONIFEROUS & ($FOREST | $MOUNTAIN | $SWAMP)",
-      "weight": 0.05
+      "weight": 0.03
     }
   ],
   "metadata": {

@@ -6,7 +6,7 @@
     },
     {
       "biomes": "$SPOOKY | $WASTELAND | $DEAD",
-      "weight": 0.5
+      "weight": 0.25
     },
     {
       "biomes": "$FOREST | $SWAMP",
