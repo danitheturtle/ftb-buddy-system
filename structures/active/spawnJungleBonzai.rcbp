@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "biomes": "$NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$JUNGLE & $THEMED_TREES & $DENSE & $HOT & !$LUSH ",
+      "weight": 0.5
+    }
+  ],
+  "metadata": {
+    "title": "Jungle Bonzai (BS)",
+    "description": [
+      "Spawn in the bonzai jungle"
+    ]
+  }
+}

@@ -5,12 +5,12 @@
       "weight": 0.0
     },
     {
-      "biomes": "$FOREST & $CONIFEROUS",
+      "biomes": "$FOREST & $CONIFEROUS & !$COLD",
       "weight": 1.5
     },
     {
       "biomes": "$FOREST & $MOUNTAIN",
-      "weight": 0.1
+      "weight": 0.05
     },
     {
       "biomes": "!$CONIFEROUS & ($FOREST | $MOUNTAIN | $SWAMP)",
@@ -18,7 +18,7 @@
     }
   ],
   "metadata": {
-    "title": "Pine Trees (BS)",
+    "title": "Conifer Trees (BS)",
     "description": [
       "Biome Group for coniferous trees"
     ]

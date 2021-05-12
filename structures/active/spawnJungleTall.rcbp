@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "biomes": "$THEMED_TREES | $NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$JUNGLE & !$HOT",
+      "weight": 1.0
+    }
+  ],
+  "metadata": {
+    "title": "Jungle Tall (BS)",
+    "description": [
+      "Spawn in the tall jungle"
+    ]
+  }
+}

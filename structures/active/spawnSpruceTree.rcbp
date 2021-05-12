@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "biomes": "$THEMED_TREES | $SWAMP | $MESA | $SAVANNA | $HOT | $DRY | $SANDY | $BEACH | $NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD | $MUSHROOM | $MAGICAL",
+      "weight": 0.0
+    },
+    {
+      "biomes": "$FOREST & $CONIFEROUS & $COLD",
+      "weight": 1.5
+    },
+    {
+      "biomes": "$FOREST & $MOUNTAIN",
+      "weight": 0.1
+    },
+    {
+      "biomes": "!$CONIFEROUS & ($FOREST | $SWAMP)",
+      "weight": 0.03
+    }
+  ],
+  "metadata": {
+    "title": "Spruce Trees (BS)",
+    "description": [
+      "Biome Group for spruce trees"
+    ]
+  }
+}

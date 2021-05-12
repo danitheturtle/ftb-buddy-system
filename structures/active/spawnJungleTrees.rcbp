@@ -1,11 +1,7 @@
 {
   "data": [
     {
-      "biomes": "$THEMED_TREES",
-      "weight": 0.0
-    },
-    {
-      "biomes": "$NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD",
+      "biomes": "$THEMED_TREES | $NETHER | $VOID | $END | $WATER | $WASTELAND | $SPOOKY | $DEAD",
       "weight": 0.0
     },
     {
@@ -14,9 +10,9 @@
     }
   ],
   "metadata": {
-    "title": "Jungle Trees (BS)",
+    "title": "Jungle Biomes (BS)",
     "description": [
-      ""
+      "Spawn in all jungle biomes"
     ]
   }
 }
