@@ -6,7 +6,7 @@
     },
     {
       "biomes": "$JUNGLE & $HOT",
-      "weight": 0.75
+      "weight": 1.5
     }
   ],
   "metadata": {
