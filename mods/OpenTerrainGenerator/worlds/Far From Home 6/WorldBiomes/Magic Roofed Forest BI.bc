@@ -104,16 +104,16 @@ BiomeSizeWhenBorder: 7
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -1.96
+BiomeHeight: -1.86
 
 # Biome volatility.
-BiomeVolatility: 2.8
+BiomeVolatility: 0.4
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 15
+SmoothRadius: 10
 
 # Works the same way as SmoothRadius but only works on CustomHeightControl. Must be between 0 and 32, inclusive.
 # Does nothing if Custom Height Control smoothing is not enabled in the world config.
@@ -129,11 +129,15 @@ MaxAverageDepth: 0.0
 
 # Another type of noise. This noise is independent from biomes. The larger the values the more chaotic/volatile landscape generation becomes.
 # Setting the values to negative will have the opposite effect and make landscape generation calmer/gentler.
-Volatility1: -4.65
-Volatility2: -6.25
+Volatility1: 0.01
+
+Volatility2: 3.25
+
+# Adjust the weight of the corresponding volatility settings. This allows you to change how prevalent you want either of the volatility settings to be in the terrain.
 VolatilityWeight1: 1.95
 
-VolatilityWeight2: 1.0
+VolatilityWeight2: 1.95
+
 # Disable all noises except Volatility1 and Volatility2. Also disable default block chance from height.
 DisableBiomeHeight: false
 
@@ -141,8 +145,9 @@ DisableBiomeHeight: false
 # blocks height, starting at the bottom of the world. Positive entry - larger chance of spawn blocks, negative - smaller
 # Values which affect your configuration may be found only experimentally. Values may be very big, like ~3000.0 depends from height
 # Example:
-
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.51, 5.0, -2.0, -2.0, 5.0, 10.11, 6.11, 6.11, 6.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11, 8.11
+#   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+# Makes empty layer above bedrock layer. 
+CustomHeightControl: 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 40.0, 23.61, 13.11, 2.41, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11, -8.11
 
 
 #######################################################################
@@ -281,7 +286,8 @@ GrassColor2: #009975
 GrassColorIsMultiplier: false
 
 # Biome foliage color.
-FoliageColor: #C96480
+# FoliageColor: #C96480
+FoliageColor: #CC467F
 
 # Biome foliage color 2, used to create a gradient like vanilla swamp grass,only works when FoliageColorIsMultiplier is set to false.Forge only atm.
 FoliageColor2: #4ADCF9

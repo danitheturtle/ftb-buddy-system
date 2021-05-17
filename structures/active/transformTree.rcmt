@@ -15,7 +15,7 @@
         "transformer": {
           "id": "multi_22f7b2a",
           "data": {
-            "environmentMatcher": "!gen.type\u003dsapling \u0026 !gen.type\u003ddecoration",
+            "environmentMatcher": "!gen.type\u003dsapling",
             "transformers": [
               {
                 "type": "naturalAir",
@@ -52,8 +52,8 @@
                 "type": "ensureBlocks",
                 "transformer": {
                   "id": "ensureBlocks_79cc2a92",
-                  "sourceExpression": "!(minecraft:leaves | minecraft:leaves2 | minecraft:vine | biomesoplenty:leaves_0 | biomesoplenty:leaves_1 | biomesoplenty:leaves_2 | biomesoplenty:leaves_3 | biomesoplenty:leaves_4 | biomesoplenty:leaves_5 | reccomplex:generic_space | reccomplex:generic_solid)",
-                  "destExpression": "is:air | is:leaves | is:replaceable"
+                  "sourceExpression": "reccomplex:generic_space \u0026 metadata\u003d12",
+                  "destExpression": "is:air | is:leaves | (is:replaceable \u0026 !blocks:movement)"
                 }
               }
             ]

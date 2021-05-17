@@ -2,7 +2,7 @@
   "data": [
     {
       "biomes": "$MUSHROOM",
-      "weight": 0.25
+      "weight": 0.125
     }
   ],
   "metadata": {
